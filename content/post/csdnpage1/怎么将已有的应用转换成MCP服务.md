@@ -1,10 +1,10 @@
----
-title: "怎么将已有的应用转换成MCP服务？"
+﻿---
+title: "怎么将已有的应用转换成MCP服务"
 date: 2026-01-19 16:38:18
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

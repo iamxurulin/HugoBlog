@@ -1,10 +1,10 @@
----
-title: "怎么在RabbitMQ中配置消息的TTL？"
+﻿---
+title: "怎么在RabbitMQ中配置消息的TTL"
 date: 2026-01-12 14:17:02
 categories:
 - 八股
 tags:
-- 消息队列
+  - 消息队列
 draft: false
 ---
 

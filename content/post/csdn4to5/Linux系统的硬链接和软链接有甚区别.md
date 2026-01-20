@@ -1,10 +1,10 @@
----
-title: "Linux系统的硬链接和软链接有甚区别？"
+﻿---
+title: "Linux系统的硬链接和软链接有甚区别"
 date: 2025-12-29 17:04:55
 categories:
 - 八股
 tags:
-- Linux
+  - Linux
 draft: false
 ---
 

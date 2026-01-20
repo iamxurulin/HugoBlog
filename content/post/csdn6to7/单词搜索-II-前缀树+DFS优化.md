@@ -1,10 +1,10 @@
----
-title: "单词搜索 II：前缀树+DFS优化"
+﻿---
+title: "单词搜索-II-前缀树+DFS优化"
 date: 2025-11-22 22:17:00
 categories:
 - 算法
 tags:
-- 算法
+  - 二叉树
 draft: false
 ---
 

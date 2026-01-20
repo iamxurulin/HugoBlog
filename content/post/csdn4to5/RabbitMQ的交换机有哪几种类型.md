@@ -1,10 +1,10 @@
----
-title: "RabbitMQ的交换机有哪几种类型？"
+﻿---
+title: "RabbitMQ的交换机有哪几种类型"
 date: 2026-01-06 17:52:56
 categories:
 - 八股
 tags:
-- 消息队列
+  - 消息队列
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
-title: "【DFS】矩阵最长递增路径"
+﻿---
+title: "DFS-矩阵最长递增路径"
 date: 2026-01-19 00:23:17
 categories:
 - 算法
 tags:
-- leetcode
+  - 搜索
 draft: false
 ---
 

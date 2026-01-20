@@ -1,10 +1,10 @@
----
-title: "这道LeetCode Hard题，用一个转化思想就变简单了"
+﻿---
+title: "这道LeetCode-Hard题-用一个转化思想就变简单了"
 date: 2025-12-11 21:55:43
 categories:
 - 算法
 tags:
-- 算法
+  - HashMap
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
-title: "什么是Java的多态特性？"
+﻿---
+title: "什么是Java的多态特性"
 date: 2025-12-24 18:25:20
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

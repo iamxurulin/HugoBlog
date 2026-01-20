@@ -1,10 +1,10 @@
----
-title: "LangChain有哪些核心组件？"
+﻿---
+title: "LangChain有哪些核心组件"
 date: 2026-01-10 14:45:10
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

@@ -1,5 +1,5 @@
----
-title: "消除VS Code在检查style标签里面的 CSS 代码时产生的语法警告"
+﻿---
+title: "消除VS-Code在检查style标签里面的-CSS-代码时产生的语法警告"
 date: 2026-01-18 15:21:15
 categories:
 - 项目

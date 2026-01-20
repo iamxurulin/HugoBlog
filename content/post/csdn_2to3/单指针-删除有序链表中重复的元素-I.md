@@ -1,8 +1,10 @@
----
-title: "【单指针】删除有序链表中重复的元素-I"
+﻿---
+title: "单指针-删除有序链表中重复的元素-I"
 date: 2026-01-09 21:14:50
+categories:
+- 算法
 tags:
-- leetcode
+  - 链表
 draft: false
 ---
 

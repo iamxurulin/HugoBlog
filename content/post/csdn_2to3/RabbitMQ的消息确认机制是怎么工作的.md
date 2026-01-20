@@ -1,10 +1,10 @@
----
-title: "RabbitMQ的消息确认机制是怎么工作的？"
+﻿---
+title: "RabbitMQ的消息确认机制是怎么工作的"
 date: 2026-01-10 16:33:38
 categories:
 - 八股
 tags:
-- 消息队列
+  - 消息队列
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
-title: "【并查集】Leetcode947移除最多的同行或同列石头"
+﻿---
+title: "并查集-Leetcode947移除最多的同行或同列石头"
 date: 2026-01-03 23:05:05
 categories:
 - 算法
 tags:
-- 算法
+  - HashMap
 draft: false
 ---
 

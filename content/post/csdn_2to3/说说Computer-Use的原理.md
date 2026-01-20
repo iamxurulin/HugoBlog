@@ -1,10 +1,10 @@
----
-title: "说说Computer Use的原理"
+﻿---
+title: "说说Computer-Use的原理"
 date: 2026-01-15 16:54:17
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
+﻿---
 title: "Leetcode1438绝对值不超过限制的最长连续子数组"
 date: 2026-01-01 20:50:33
 categories:
 - 算法
 tags:
-- leetcode
+  - 数组
 draft: false
 ---
 

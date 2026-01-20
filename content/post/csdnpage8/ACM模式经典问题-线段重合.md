@@ -1,10 +1,10 @@
----
-title: "ACM模式经典问题：线段重合"
+﻿---
+title: "ACM模式经典问题-线段重合"
 date: 2025-10-07 12:26:33
 categories:
 - 算法
 tags:
-- leetcode
+  - 堆
 draft: false
 ---
 

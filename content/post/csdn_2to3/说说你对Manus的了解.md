@@ -1,10 +1,10 @@
----
+﻿---
 title: "说说你对Manus的了解"
 date: 2026-01-15 15:50:33
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

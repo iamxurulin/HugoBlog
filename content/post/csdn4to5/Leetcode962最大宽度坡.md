@@ -1,10 +1,10 @@
----
+﻿---
 title: "Leetcode962最大宽度坡"
 date: 2025-12-30 20:05:05
 categories:
 - 算法
 tags:
-- leetcode
+  - 栈与队列
 draft: false
 ---
 

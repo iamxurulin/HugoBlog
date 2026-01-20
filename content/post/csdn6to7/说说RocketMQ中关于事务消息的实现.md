@@ -1,10 +1,10 @@
----
+﻿---
 title: "说说RocketMQ中关于事务消息的实现"
 date: 2025-12-26 16:46:06
 categories:
 - 八股
 tags:
-- 消息队列
+  - 消息队列
 draft: false
 ---
 

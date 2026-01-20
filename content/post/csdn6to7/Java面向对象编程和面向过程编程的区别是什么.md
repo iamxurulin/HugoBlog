@@ -1,10 +1,10 @@
----
-title: "Java面向对象编程和面向过程编程的区别是什么？"
+﻿---
+title: "Java面向对象编程和面向过程编程的区别是什么"
 date: 2025-12-26 15:11:26
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

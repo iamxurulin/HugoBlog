@@ -1,10 +1,10 @@
----
-title: "RocketMQ的事务消息有什么缺点你知道吗？"
+﻿---
+title: "RocketMQ的事务消息有什么缺点你知道吗"
 date: 2025-12-28 17:01:10
 categories:
 - 八股
 tags:
-- 消息队列
+  - 消息队列
 draft: false
 ---
 

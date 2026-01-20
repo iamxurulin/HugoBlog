@@ -1,10 +1,10 @@
----
-title: "什么时候@Async会失效？"
+﻿---
+title: "什么时候@Async会失效"
 date: 2026-01-01 14:12:06
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

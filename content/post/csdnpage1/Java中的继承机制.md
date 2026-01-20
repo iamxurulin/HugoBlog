@@ -1,10 +1,10 @@
----
+﻿---
 title: "Java中的继承机制"
 date: 2026-01-16 16:29:52
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

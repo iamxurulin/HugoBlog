@@ -1,9 +1,10 @@
----
-title: "在RabbitMQ中，怎么确保消息不会丢失？"
+﻿---
+title: "在RabbitMQ中-怎么确保消息不会丢失"
 date: 2026-01-08 17:15:44
-
+categories:
+- 八股
 tags:
-- 消息队列
+  - 消息队列
 draft: false
 ---
 

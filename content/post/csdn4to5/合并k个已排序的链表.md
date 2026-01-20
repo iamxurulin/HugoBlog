@@ -1,10 +1,10 @@
----
+﻿---
 title: "合并k个已排序的链表"
 date: 2026-01-07 21:30:37
 categories:
 - 算法
 tags:
-- leetcode
+  - 链表
 draft: false
 ---
 

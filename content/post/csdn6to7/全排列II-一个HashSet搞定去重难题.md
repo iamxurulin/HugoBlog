@@ -1,10 +1,10 @@
----
-title: "全排列II：一个HashSet搞定去重难题"
+﻿---
+title: "全排列II-一个HashSet搞定去重难题"
 date: 2025-11-14 21:11:12
 categories:
 - 算法
 tags:
-- leetcode
+  - 搜索
 draft: false
 ---
 

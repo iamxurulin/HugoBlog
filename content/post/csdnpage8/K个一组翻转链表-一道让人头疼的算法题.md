@@ -1,10 +1,10 @@
----
-title: "K个一组翻转链表：一道让人头疼的算法题"
+﻿---
+title: "K个一组翻转链表-一道让人头疼的算法题"
 date: 2025-10-15 20:51:43
 categories:
 - 算法
 tags:
-- leetcode
+  - 链表
 draft: false
 ---
 

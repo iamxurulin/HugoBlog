@@ -1,10 +1,10 @@
----
-title: "什么是Spring Bean？"
+﻿---
+title: "什么是Spring-Bean"
 date: 2026-01-19 15:50:02
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
-title: "【回溯】N皇后问题"
+﻿---
+title: "回溯-N皇后问题"
 date: 2026-01-19 00:24:00
 categories:
 - 算法
 tags:
-- leetcode
+  - 搜索
 draft: false
 ---
 

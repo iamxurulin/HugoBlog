@@ -1,10 +1,10 @@
----
-title: "在RAG中选择Embedding Model需要考虑哪些因素？"
+﻿---
+title: "在RAG中选择Embedding-Model需要考虑哪些因素"
 date: 2026-01-07 14:43:53
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

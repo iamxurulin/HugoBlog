@@ -1,10 +1,10 @@
----
-title: "【快排思想】寻找第K大"
+﻿---
+title: "快排思想-寻找第K大"
 date: 2026-01-16 07:59:31
 categories:
 - 算法
 tags:
-- leetcode
+  - 堆
 draft: false
 ---
 

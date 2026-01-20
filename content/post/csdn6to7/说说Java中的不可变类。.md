@@ -1,10 +1,10 @@
----
+﻿---
 title: "说说Java中的不可变类。"
 date: 2025-12-25 17:47:54
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
+﻿---
 title: "Leetcode1499满足不等式的最大值"
 date: 2026-01-02 23:20:11
 categories:
 - 算法
 tags:
-- leetcode
+  - 栈与队列
 draft: false
 ---
 

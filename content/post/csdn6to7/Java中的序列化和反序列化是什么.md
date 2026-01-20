@@ -1,10 +1,10 @@
----
-title: "Java中的序列化和反序列化是什么？"
+﻿---
+title: "Java中的序列化和反序列化是什么"
 date: 2025-12-24 15:37:56
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

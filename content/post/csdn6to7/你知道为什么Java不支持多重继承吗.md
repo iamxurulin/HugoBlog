@@ -1,10 +1,10 @@
----
-title: "你知道为什么Java不支持多重继承吗？"
+﻿---
+title: "你知道为什么Java不支持多重继承吗"
 date: 2025-12-26 14:20:22
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

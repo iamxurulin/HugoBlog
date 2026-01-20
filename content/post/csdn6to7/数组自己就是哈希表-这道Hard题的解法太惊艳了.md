@@ -1,10 +1,10 @@
----
-title: "数组自己就是哈希表?这道Hard题的解法太惊艳了"
+﻿---
+title: "数组自己就是哈希表-这道Hard题的解法太惊艳了"
 date: 2025-12-19 20:04:55
 categories:
 - 算法
 tags:
-- leetcode
+  - HashMap
 draft: false
 ---
 

@@ -1,8 +1,10 @@
----
+﻿---
 title: "包含min函数的栈"
 date: 2026-01-15 20:04:19
+categories:
+- 算法
 tags:
-- leetcode
+  - 栈与队列
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
+﻿---
 title: "链表中倒数最后k个结点"
 date: 2026-01-08 19:30:40
 categories:
 - 算法
 tags:
-- leetcode
+  - 链表
 draft: false
 ---
 

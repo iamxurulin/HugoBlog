@@ -1,10 +1,10 @@
----
+﻿---
 title: "说说大模型中的PEFT"
 date: 2026-01-18 16:51:50
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

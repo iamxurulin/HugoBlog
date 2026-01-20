@@ -1,10 +1,10 @@
----
-title: "Spring是怎么解决循环依赖的？"
+﻿---
+title: "Spring是怎么解决循环依赖的"
 date: 2026-01-03 15:15:01
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

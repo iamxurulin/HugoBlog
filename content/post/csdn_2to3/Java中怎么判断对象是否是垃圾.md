@@ -1,10 +1,10 @@
----
-title: "Java中怎么判断对象是否是垃圾？"
+﻿---
+title: "Java中怎么判断对象是否是垃圾"
 date: 2026-01-09 16:00:00
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

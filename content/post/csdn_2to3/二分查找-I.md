@@ -1,10 +1,10 @@
----
+﻿---
 title: "二分查找-I"
 date: 2026-01-09 22:09:01
 categories:
 - 算法
 tags:
-- leetcode
+  - 数组
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
+﻿---
 title: "请解释一下Java中的强引用、弱引用、软引用和虚引用"
 date: 2026-01-13 16:57:03
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

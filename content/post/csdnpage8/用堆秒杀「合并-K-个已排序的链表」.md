@@ -1,10 +1,10 @@
----
-title: "用堆秒杀「合并 K 个已排序的链表」"
+﻿---
+title: "用堆秒杀「合并-K-个已排序的链表」"
 date: 2025-10-06 19:08:27
 categories:
 - 算法
 tags:
-- leetcode
+  - 链表
 draft: false
 ---
 

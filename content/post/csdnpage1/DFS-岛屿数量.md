@@ -1,10 +1,10 @@
----
-title: "【DFS】岛屿数量"
+﻿---
+title: "DFS-岛屿数量"
 date: 2026-01-18 05:00:00
 categories:
 - 算法
 tags:
-- leetcode
+  - 搜索
 draft: false
 ---
 

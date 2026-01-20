@@ -1,10 +1,10 @@
----
+﻿---
 title: "常用的JVM配置参数"
 date: 2026-01-05 15:48:48
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

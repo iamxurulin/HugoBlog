@@ -1,10 +1,10 @@
----
-title: "在Java中参数传递的方式是按值还是按引用？"
+﻿---
+title: "在Java中参数传递的方式是按值还是按引用"
 date: 2025-12-25 16:57:10
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

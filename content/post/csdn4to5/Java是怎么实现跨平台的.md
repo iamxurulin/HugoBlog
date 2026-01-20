@@ -1,10 +1,10 @@
----
-title: "Java是怎么实现跨平台的？"
+﻿---
+title: "Java是怎么实现跨平台的"
 date: 2026-01-01 17:02:43
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

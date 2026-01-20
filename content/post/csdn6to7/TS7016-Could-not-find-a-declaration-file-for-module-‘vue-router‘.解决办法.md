@@ -1,8 +1,10 @@
----
-title: "TS7016: Could not find a declaration file for module ‘vue-router‘.解决办法"
+﻿---
+title: "TS7016-Could-not-find-a-declaration-file-for-module-‘vue-router‘.解决办法"
 date: 2025-12-25 15:45:44
+categories:
+- 项目
 tags:
-- 前端
+- Code
 draft: false
 ---
 

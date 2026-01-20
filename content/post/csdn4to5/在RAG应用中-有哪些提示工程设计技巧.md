@@ -1,10 +1,10 @@
----
-title: "在RAG应用中，有哪些提示工程设计技巧？"
+﻿---
+title: "在RAG应用中-有哪些提示工程设计技巧"
 date: 2026-01-08 15:12:58
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

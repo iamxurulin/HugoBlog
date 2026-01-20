@@ -1,10 +1,10 @@
----
-title: "Java对象是怎么在虚拟机中存储的？"
+﻿---
+title: "Java对象是怎么在虚拟机中存储的"
 date: 2026-01-03 16:19:53
 categories:
 - 八股
 tags:
-- JVM
+  - Java
 draft: false
 ---
 

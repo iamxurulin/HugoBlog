@@ -1,10 +1,10 @@
----
-title: "什么是RabbitMQ中的死信队列？"
+﻿---
+title: "什么是RabbitMQ中的死信队列"
 date: 2026-01-12 14:44:12
 categories:
 - 八股
 tags:
-- 消息队列
+  - 消息队列
 draft: false
 ---
 

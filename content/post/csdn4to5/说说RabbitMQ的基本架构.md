@@ -1,10 +1,10 @@
----
+﻿---
 title: "说说RabbitMQ的基本架构"
 date: 2026-01-05 15:37:48
 categories:
 - 八股
 tags:
-- 消息队列
+  - 消息队列
 draft: false
 ---
 

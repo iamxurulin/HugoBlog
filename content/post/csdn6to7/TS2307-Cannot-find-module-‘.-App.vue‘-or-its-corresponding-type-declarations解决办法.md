@@ -1,8 +1,10 @@
----
-title: "TS2307: Cannot find module ‘./App.vue‘ or its corresponding type declarations解决办法"
+﻿---
+title: "TS2307-Cannot-find-module-‘.-App.vue‘-or-its-corresponding-type-declarations解决办法"
 date: 2025-11-16 11:03:15
+categories:
+- 项目
 tags:
-- 前端
+- Code
 draft: false
 ---
 

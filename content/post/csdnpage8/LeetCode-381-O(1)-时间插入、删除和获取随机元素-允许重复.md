@@ -1,10 +1,10 @@
----
-title: "LeetCode 381: O(1) 时间插入、删除和获取随机元素 - 允许重复"
+﻿---
+title: "LeetCode-381-O(1)-时间插入、删除和获取随机元素-允许重复"
 date: 2025-10-23 20:48:13
 categories:
 - 算法
 tags:
-- leetcode
+  - HashMap
 draft: false
 ---
 

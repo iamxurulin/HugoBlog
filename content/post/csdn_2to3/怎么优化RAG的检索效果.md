@@ -1,10 +1,10 @@
----
-title: "怎么优化RAG的检索效果？"
+﻿---
+title: "怎么优化RAG的检索效果"
 date: 2026-01-13 16:06:35
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

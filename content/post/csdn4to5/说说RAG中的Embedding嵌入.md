@@ -1,10 +1,10 @@
----
+﻿---
 title: "说说RAG中的Embedding嵌入"
 date: 2026-01-06 15:43:40
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

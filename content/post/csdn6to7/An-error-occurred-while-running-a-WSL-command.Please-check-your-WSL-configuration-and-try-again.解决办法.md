@@ -1,5 +1,5 @@
----
-title: "An error occurred while running a WSL command.Please check your WSL configuration and try again.解决办法"
+﻿---
+title: "An-error-occurred-while-running-a-WSL-command.Please-check-your-WSL-configuration-and-try-again.解决办法"
 date: 2025-10-31 22:36:04
 categories:
 - 项目

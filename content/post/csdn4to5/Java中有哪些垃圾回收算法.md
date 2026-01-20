@@ -1,10 +1,10 @@
----
-title: "Java中有哪些垃圾回收算法？"
+﻿---
+title: "Java中有哪些垃圾回收算法"
 date: 2026-01-08 16:54:37
 categories:
 - 八股
 tags:
-- JVM
+  - Java
 draft: false
 ---
 

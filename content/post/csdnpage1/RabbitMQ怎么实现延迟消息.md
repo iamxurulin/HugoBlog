@@ -1,10 +1,10 @@
----
-title: "RabbitMQ怎么实现延迟消息？"
+﻿---
+title: "RabbitMQ怎么实现延迟消息"
 date: 2026-01-17 18:19:27
 categories:
 - 八股
 tags:
-- 消息队列
+  - 消息队列
 draft: false
 ---
 

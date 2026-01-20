@@ -1,4 +1,4 @@
 ﻿---
-title: "基础"
-image: "/images/the-creative-exchange-d2zvqp3fpro-unsplash.jpg"
+title: "Java"
+image: "/cover/java_original_logo_icon_146458.png"
 ---

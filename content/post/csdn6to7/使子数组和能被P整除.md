@@ -1,10 +1,10 @@
----
+﻿---
 title: "使子数组和能被P整除"
 date: 2025-11-28 21:46:29
 categories:
 - 算法
 tags:
-- leetcode
+  - HashMap
 draft: false
 ---
 

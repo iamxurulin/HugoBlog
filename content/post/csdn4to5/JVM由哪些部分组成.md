@@ -1,10 +1,10 @@
----
-title: "JVM由哪些部分组成？"
+﻿---
+title: "JVM由哪些部分组成"
 date: 2026-01-07 16:43:37
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

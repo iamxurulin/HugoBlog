@@ -1,5 +1,5 @@
----
-title: "Windows 11通过VMware Workstation Pro搭建centos7.6系统遇到的问题"
+﻿---
+title: "Windows-11通过VMware-Workstation-Pro搭建centos7.6系统遇到的问题"
 date: 2025-09-07 23:11:14
 categories:
 - 项目

@@ -1,10 +1,10 @@
----
-title: "Spring Boot 2.x和1.x版本相比有哪些区别与改进？"
+﻿---
+title: "Spring-Boot-2.x和1.x版本相比有哪些区别与改进"
 date: 2026-01-02 15:02:23
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
+﻿---
 title: "Leetcode2166-设计位集"
 date: 2025-10-12 22:26:58
 categories:
 - 算法
 tags:
-- leetcode
+  - 位运算
 draft: false
 ---
 

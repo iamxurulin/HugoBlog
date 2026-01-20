@@ -1,10 +1,10 @@
----
+﻿---
 title: "解释一下RAG中的Rerank"
 date: 2026-01-01 16:44:33
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

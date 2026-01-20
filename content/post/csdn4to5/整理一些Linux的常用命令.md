@@ -1,4 +1,4 @@
----
+﻿---
 title: "整理一些Linux的常用命令"
 date: 2026-01-03 16:40:32
 categories:

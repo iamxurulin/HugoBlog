@@ -1,10 +1,10 @@
----
-title: "你知道Spring Boot配置文件的加载优先级吗？"
+﻿---
+title: "你知道Spring-Boot配置文件的加载优先级吗"
 date: 2026-01-07 15:59:34
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

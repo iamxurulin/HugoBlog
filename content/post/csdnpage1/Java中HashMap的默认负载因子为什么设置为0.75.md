@@ -1,10 +1,10 @@
----
-title: "Java中HashMap的默认负载因子为什么设置为0.75？"
+﻿---
+title: "Java中HashMap的默认负载因子为什么设置为0.75"
 date: 2026-01-18 17:11:19
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

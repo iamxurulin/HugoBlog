@@ -1,10 +1,10 @@
----
+﻿---
 title: "MCP协议在大模型中的作用"
 date: 2026-01-17 18:15:49
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

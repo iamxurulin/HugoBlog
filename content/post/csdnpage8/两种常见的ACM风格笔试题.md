@@ -1,10 +1,10 @@
----
+﻿---
 title: "两种常见的ACM风格笔试题"
 date: 2025-09-30 21:27:03
 categories:
 - 算法
 tags:
-- Code
+  - 数组
 draft: false
 ---
 

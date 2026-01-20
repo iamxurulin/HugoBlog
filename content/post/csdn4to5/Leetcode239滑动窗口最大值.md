@@ -1,10 +1,10 @@
----
+﻿---
 title: "Leetcode239滑动窗口最大值"
 date: 2025-12-31 21:20:32
 categories:
 - 算法
 tags:
-- leetcode
+  - 栈与队列
 draft: false
 ---
 

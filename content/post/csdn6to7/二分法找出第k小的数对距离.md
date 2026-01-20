@@ -1,10 +1,10 @@
----
+﻿---
 title: "二分法找出第k小的数对距离"
 date: 2025-12-27 20:10:12
 categories:
 - 算法
 tags:
-- leetcode
+  - 数组
 draft: false
 ---
 

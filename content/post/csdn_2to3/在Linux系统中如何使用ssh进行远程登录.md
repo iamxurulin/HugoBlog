@@ -1,10 +1,10 @@
----
-title: "在Linux系统中如何使用ssh进行远程登录？"
+﻿---
+title: "在Linux系统中如何使用ssh进行远程登录"
 date: 2026-01-14 17:07:17
 categories:
 - 八股
 tags:
-- Linux
+  - Java
 draft: false
 ---
 

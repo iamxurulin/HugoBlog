@@ -1,10 +1,10 @@
----
-title: "说说看你认为Java的优势是什么？"
+﻿---
+title: "说说看你认为Java的优势是什么"
 date: 2025-12-25 13:12:33
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

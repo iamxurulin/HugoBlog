@@ -1,10 +1,10 @@
----
-title: "什么是Spring IOC"
+﻿---
+title: "什么是Spring-IOC"
 date: 2026-01-18 18:12:06
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

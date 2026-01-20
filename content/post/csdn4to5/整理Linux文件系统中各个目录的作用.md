@@ -1,10 +1,10 @@
----
+﻿---
 title: "整理Linux文件系统中各个目录的作用"
 date: 2026-01-08 16:25:43
 categories:
 - 八股
 tags:
-- Linux
+  - Linux
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
-title: "IDEA2023中新建Spring Boot2.X版本的工程的方法"
+﻿---
+title: "IDEA2023中新建Spring-Boot2.X版本的工程的方法"
 date: 2025-12-30 09:40:44
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

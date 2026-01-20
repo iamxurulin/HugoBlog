@@ -1,10 +1,10 @@
----
+﻿---
 title: "说说LangChain的核心架构"
 date: 2026-01-10 15:22:25
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

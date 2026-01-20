@@ -1,11 +1,10 @@
----
-title: "Spring Boot工程启动以后，怎么将数据库中已有的固定内容打入到Redis缓存中？"
+﻿---
+title: "Spring-Boot工程启动以后-怎么将数据库中已有的固定内容打入到Redis缓存中"
 date: 2025-12-31 15:49:46
 categories:
 - 八股
 tags:
-- Java
-- 数据库
+  - Java
 draft: false
 ---
 

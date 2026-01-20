@@ -1,10 +1,10 @@
----
+﻿---
 title: "Leetcode200岛屿数量"
 date: 2026-01-03 22:25:01
 categories:
 - 算法
 tags:
-- leetcode
+  - 搜索
 draft: false
 ---
 

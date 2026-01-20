@@ -1,10 +1,10 @@
----
+﻿---
 title: "O(1)时间复杂度实现有setAll功能的哈希表"
 date: 2025-10-20 21:55:45
 categories:
 - 算法
 tags:
-- leetcode
+  - HashMap
 draft: false
 ---
 

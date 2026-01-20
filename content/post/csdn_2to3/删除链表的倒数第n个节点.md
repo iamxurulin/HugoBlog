@@ -1,10 +1,10 @@
----
+﻿---
 title: "删除链表的倒数第n个节点"
 date: 2026-01-08 20:11:33
 categories:
 - 算法
 tags:
-- leetcode
+  - 链表
 draft: false
 ---
 

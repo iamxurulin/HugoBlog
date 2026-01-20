@@ -1,10 +1,10 @@
----
+﻿---
 title: "解释一下Re-Reading"
 date: 2026-01-12 15:32:15
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

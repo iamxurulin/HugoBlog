@@ -1,10 +1,10 @@
----
-title: "JVM的内存区域是怎么划分的？"
+﻿---
+title: "JVM的内存区域是怎么划分的"
 date: 2026-01-11 16:36:51
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

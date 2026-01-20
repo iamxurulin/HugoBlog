@@ -1,10 +1,10 @@
----
+﻿---
 title: "整理Java中Object类的方法和作用"
 date: 2026-01-10 15:47:23
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

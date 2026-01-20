@@ -1,12 +1,11 @@
----
-title: "【算法详解】二叉树路径总和问题——DFS+回溯完整题解（Java实现）"
+﻿---
+title: "算法详解-二叉树路径总和问题——DFS+回溯完整题解-Java实现"
 date: 2025-11-06 21:00:24
 categories:
 - 算法
 - 八股
 tags:
-- 算法
-- Java
+  - Java
 draft: false
 ---
 

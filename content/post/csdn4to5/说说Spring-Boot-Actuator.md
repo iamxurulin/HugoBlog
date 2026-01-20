@@ -1,10 +1,10 @@
----
-title: "说说Spring Boot Actuator"
+﻿---
+title: "说说Spring-Boot-Actuator"
 date: 2026-01-04 14:33:48
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

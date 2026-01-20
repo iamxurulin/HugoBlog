@@ -1,10 +1,10 @@
----
+﻿---
 title: "解释一下Selector、Channel"
 date: 2026-01-09 14:15:00
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

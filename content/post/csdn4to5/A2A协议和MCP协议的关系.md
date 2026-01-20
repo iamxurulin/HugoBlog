@@ -1,8 +1,10 @@
----
+﻿---
 title: "A2A协议和MCP协议的关系"
 date: 2026-01-05 13:34:53
+categories:
+- AI
 tags:
-- 消息队列
+  - 消息队列
 draft: false
 ---
 

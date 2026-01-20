@@ -1,10 +1,10 @@
----
-title: "LeetCode 380: O(1) 时间插入、删除和获取随机元素"
+﻿---
+title: "LeetCode-380-O(1)-时间插入、删除和获取随机元素"
 date: 2025-10-22 21:10:40
 categories:
 - 算法
 tags:
-- leetcode
+  - HashMap
 draft: false
 ---
 

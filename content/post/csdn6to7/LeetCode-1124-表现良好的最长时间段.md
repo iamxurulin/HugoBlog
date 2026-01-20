@@ -1,10 +1,10 @@
----
-title: "LeetCode 1124: 表现良好的最长时间段"
+﻿---
+title: "LeetCode-1124-表现良好的最长时间段"
 date: 2025-11-27 21:18:29
 categories:
 - 算法
 tags:
-- 算法
+  - HashMap
 draft: false
 ---
 

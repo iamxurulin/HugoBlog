@@ -1,10 +1,10 @@
----
-title: "Java中的Exception和Error有什么区别？"
+﻿---
+title: "Java中的Exception和Error有什么区别"
 date: 2025-12-24 16:50:46
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

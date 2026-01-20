@@ -1,10 +1,10 @@
----
-title: "Spring Bean一共有几种作用域？"
+﻿---
+title: "Spring-Bean一共有几种作用域"
 date: 2026-01-05 14:53:26
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
+﻿---
 title: "RabbitMQ中的Prefetch参数"
 date: 2026-01-11 17:07:58
 categories:
 - 八股
 tags:
-- 消息队列
+  - 消息队列
 draft: false
 ---
 

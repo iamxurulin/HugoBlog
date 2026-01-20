@@ -1,10 +1,10 @@
----
-title: "PO、VO、BO、DTO、DAO、POJO有什么区别？"
+﻿---
+title: "PO、VO、BO、DTO、DAO、POJO有什么区别"
 date: 2026-01-08 17:58:10
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

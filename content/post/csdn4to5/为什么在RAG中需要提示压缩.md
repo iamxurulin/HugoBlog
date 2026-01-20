@@ -1,10 +1,10 @@
----
-title: "为什么在RAG中需要提示压缩？"
+﻿---
+title: "为什么在RAG中需要提示压缩"
 date: 2026-01-05 14:11:44
 categories:
 - AI 
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

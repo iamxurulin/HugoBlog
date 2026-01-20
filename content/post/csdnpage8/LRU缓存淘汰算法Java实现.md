@@ -1,10 +1,10 @@
----
+﻿---
 title: "LRU缓存淘汰算法Java实现"
 date: 2025-10-21 21:52:10
 categories:
 - 算法
 tags:
-- 算法
+  - 链表
 draft: false
 ---
 

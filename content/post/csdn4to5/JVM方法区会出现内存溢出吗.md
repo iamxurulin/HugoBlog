@@ -1,10 +1,10 @@
----
-title: "JVM方法区会出现内存溢出吗？"
+﻿---
+title: "JVM方法区会出现内存溢出吗"
 date: 2026-01-02 15:19:31
 categories:
 - 八股
 tags:
-- JVM
+  - Java
 draft: false
 ---
 

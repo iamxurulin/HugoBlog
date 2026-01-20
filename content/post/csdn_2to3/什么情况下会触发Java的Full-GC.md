@@ -1,10 +1,10 @@
----
-title: "什么情况下会触发Java的Full GC？"
+﻿---
+title: "什么情况下会触发Java的Full-GC"
 date: 2026-01-14 16:29:41
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

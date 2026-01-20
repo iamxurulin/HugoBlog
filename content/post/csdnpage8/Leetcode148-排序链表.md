@@ -1,10 +1,10 @@
----
+﻿---
 title: "Leetcode148-排序链表"
 date: 2025-10-19 12:12:33
 categories:
 - 算法
 tags:
-- leetcode
+  - 链表
 draft: false
 ---
 

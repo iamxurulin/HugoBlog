@@ -1,10 +1,10 @@
----
+﻿---
 title: "链表中的节点每k个一组翻转"
 date: 2026-01-07 17:40:08
 categories:
 - 算法
 tags:
-- leetcode
+  - 链表
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
-title: "如何在Linux系统中查看某个特定进程的内存使用情况？"
+﻿---
+title: "如何在Linux系统中查看某个特定进程的内存使用情况"
 date: 2026-01-02 15:53:05
 categories:
 - 八股
 tags:
-- Linux
+  - Linux
 draft: false
 ---
 

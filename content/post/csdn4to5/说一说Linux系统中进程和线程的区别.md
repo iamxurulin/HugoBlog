@@ -1,10 +1,10 @@
----
+﻿---
 title: "说一说Linux系统中进程和线程的区别"
 date: 2025-12-30 14:50:54
 categories:
 - 八股
 tags:
-- Linux
+  - Java
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
+﻿---
 title: "说一说Java中堆和栈的区别"
 date: 2025-12-31 16:04:55
 categories:
 - 八股
 tags:
-- Java
+  - Java
 draft: false
 ---
 

@@ -1,10 +1,10 @@
----
+﻿---
 title: "MCP架构包含哪些核心组件"
 date: 2026-01-16 16:28:50
 categories:
 - AI
 tags:
-- 大模型
+  - 大模型
 draft: false
 ---
 

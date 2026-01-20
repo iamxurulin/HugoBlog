@@ -1,10 +1,10 @@
----
+﻿---
 title: "说说RabbitMQ的集群模式"
 date: 2026-01-15 17:21:36
 categories:
 - 八股
 tags:
-- 消息队列
+  - 消息队列
 draft: false
 ---
 

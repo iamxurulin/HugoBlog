@@ -1,10 +1,10 @@
----
-title: "【优先队列】最小的K个数"
+﻿---
+title: "优先队列-最小的K个数"
 date: 2026-01-16 07:58:54
 categories:
 - 算法
 tags:
-- leetcode
+  - 堆
 draft: false
 ---
 
