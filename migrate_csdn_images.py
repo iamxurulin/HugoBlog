@@ -7,9 +7,9 @@ import hashlib
 import time
 
 # 从 GitHub Actions 环境变量读取 token
-GH_TOKEN = os.getenv("DEPLOY_TOKEN")
+GH_TOKEN = os.getenv("PERSONAL_TOKEN")
 if not GH_TOKEN:
-    raise ValueError("DEPLOY_TOKEN 未在 GitHub Secrets 中设置！")
+    raise ValueError("PERSONAL_TOKEN 未在 GitHub Secrets 中设置！")
 
 REPO = "iamxurulin/iamxurulin.github.io-main"  # 你的源码仓库
 BRANCH = "main"
