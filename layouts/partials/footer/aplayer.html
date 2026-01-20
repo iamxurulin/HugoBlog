@@ -1,0 +1,54 @@
+<!-- require APlayer -->
+<div id="aplayer"></div>
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script>
+const staticDir = {{ .Site.Home.Permalink }}
+const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+	fixed: true,
+	lrcType: 3,
+    audio: [
+	    {
+             name: '远行', // 歌名
+             artist: '大青山', // 歌手
+             url: '/music/大青山-远行.mp3', // 歌曲路径
+             cover: '/music/cover.jpg', // 封面路径
+             lrc: '/music/大青山-远行-歌词.lrc', // 歌词路径
+        }
+    ]
+});
+    /**
+     * 页面销毁前监听
+     */
+    window.onbeforeunload = () => {
+        // 将播放信息用对象封装，并存入到localStorage中
+        const playInfo = {
+            index: ap.list.index,
+            currentTime: ap.audio.currentTime,
+            paused: ap.paused
+        };
+        localStorage.setItem("playInfo", JSON.stringify(playInfo));
+    };
+
+    /**
+     * 页面加载后监听
+     */
+    window.onload = () => {
+        // 从localStorage取出播放信息
+        const playInfo = JSON.parse(localStorage.getItem("playInfo"));
+        if (!playInfo) {
+            return;
+        }
+        // 切换歌曲
+        ap.list.switch(playInfo.index);
+        // 等待500ms再执行下一步(切换歌曲需要点时间，不能立马调歌曲进度条)
+        setTimeout(() => {
+            // 调整时长
+            ap.seek(playInfo.currentTime);
+            // 是否播放
+            if (!playInfo.paused) {
+                ap.play()
+            }
+        }, 500);
+    };
+</script>

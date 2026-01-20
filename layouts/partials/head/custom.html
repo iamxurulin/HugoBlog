@@ -1,0 +1,162 @@
+<div class="loading">
+<!-- From Uiverse.io by ShaikhWahid99 --> 
+<div class="liquid-loader">
+  <div class="loading-text">
+    Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+  </div>
+  <div class="loader-track">
+    <div class="liquid-fill"></div>
+  </div>
+</div>
+</div>
+
+<style>
+    .loading {
+        position: fixed;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999; /* 提高层级，防止被其他元素遮挡 */
+        background-color: #f5f5fa;
+        /* 移除暴力zoom，动画尺寸自适应，完美显示 */
+        transition: all 0.3s ease;
+    }
+	
+/* From Uiverse.io by ShaikhWahid99 */ 
+.liquid-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* 加大间距，视觉更舒适 */
+  padding: 20px;
+  font-family: system-ui, sans-serif;
+}
+
+.loader-track {
+  position: relative;
+  width: 180px;
+  height: 32px;
+  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6),0 1px 3px rgba(255, 255, 255, 0.1);
+}
+
+.liquid-fill {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: calc(100% - 4px);
+  background: linear-gradient(90deg, #4f46e5, #7c3aed, #ec4899, #f59e0b);
+  border-radius: 14px;
+  animation: fillProgress 4s ease-out infinite, colorShift 3s linear infinite;
+  box-shadow:0 0 12px rgba(124, 58, 237, 0.4),inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ 修复：补充动画暂停样式（原缺失的animated-stop） */
+.animated-stop {
+  animation-play-state: paused !important;
+  -webkit-animation-play-state: paused !important;
+}
+
+.loading-text {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  animation: textGlow 1s ease-in-out infinite;
+}
+
+.dot {
+  margin-left: 3px;
+  animation: blink 1.5s infinite;
+}
+.dot:nth-of-type(1) { animation-delay: 0s; }
+.dot:nth-of-type(2) { animation-delay: 0.3s; }
+.dot:nth-of-type(3) { animation-delay: 0.6s; }
+
+@keyframes fillProgress {
+  0% { width: 4px; }
+  25% { width: 25%; }
+  50% { width: 50%; }
+  75% { width: 75%; }
+  100% { width: calc(100% - 4px); }
+}
+@keyframes colorShift {
+  0% { filter: hue-rotate(0deg) brightness(1); }
+  33% { filter: hue-rotate(120deg) brightness(1.1); }
+  66% { filter: hue-rotate(240deg) brightness(0.9); }
+  100% { filter: hue-rotate(360deg) brightness(1); }
+}
+@keyframes textGlow {
+  0%,100% { opacity: 0.7;text-shadow: 0 0 8px rgba(139, 92, 246, 0.3); }
+  50% { opacity: 1;text-shadow: 0 0 16px rgba(139, 92, 246, 0.6); }
+}
+@keyframes blink {
+  0%,50% { opacity: 1; }
+  51%,100% { opacity: 0; }
+}
+
+/* ✅ 修复：补充核心退场动画（原缺失的scaleAndFadeout） */
+@keyframes scaleAndFadeout {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2); /* 放大1.2倍，视觉更丝滑 */
+    opacity: 0;
+  }
+}
+.scaleAndFadeout {
+  animation: scaleAndFadeout 1.5s ease-out forwards !important;
+}
+
+/* 默认显示阅读量 */
+.article-view {
+    display: flex;
+}
+
+/* 【核心代码】 如果是在列表页 (.article-list) 内部，就隐藏阅读量 */
+/* Stack 主题通常用 .article-list 包裹首页文章 */
+.article-list .article-view {
+    display: none !important;
+}
+ 
+</style>
+
+<script>	
+    function initLoading() {
+        const isFirstVisit = !sessionStorage.getItem('visited');
+        if (isFirstVisit) {
+            const loading = document.querySelector(".loading");
+            const liquidFill = document.querySelector(".liquid-fill"); // 获取进度条元素
+            loading.style.display = "flex";
+            
+            // ✅ 修复：移除无效的DOMContentLoaded监听，改用直接执行+延迟，逻辑正确且稳定
+            setTimeout(() => {
+                loadFinish(loading, liquidFill);
+                // 延迟1.5s，等退场动画执行完毕后隐藏
+                setTimeout(() => {
+                    loading.style.display = "none";
+                }, 1500);
+                // 标记为已访问，刷新不再显示
+                sessionStorage.setItem('visited', 'true');
+            }, 4000); // 延迟4秒，和进度条加载动画时长一致，完美匹配
+        }
+    }
+	
+    function loadFinish(loading, liquidFill) {
+        // ✅ 修复：暂停进度条动画（给实际的进度条元素加暂停类，替代无效的sharingon）
+        liquidFill.classList.add("animated-stop");
+        // ✅ 执行放大+渐变透明的退场动画
+        loading.classList.add("scaleAndFadeout");
+    }
+	
+    // 页面加载时执行初始化
+    initLoading();
+</script>

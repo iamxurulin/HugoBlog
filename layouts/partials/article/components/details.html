@@ -1,0 +1,113 @@
+<div class="article-details">
+  {{ if .Params.categories }}
+  <header class="article-category">
+    {{ range (.GetTerms "categories") }}
+    <a
+      href="{{ .RelPermalink }}"
+      {{
+      with
+      .Params.style
+      }}style="background-color: {{ .background }}; color: {{ .color }};"
+      {{
+      end
+      }}
+    >
+      {{ .LinkTitle }}
+    </a>
+    {{ end }}
+  </header>
+  {{ end }}
+
+  <div class="article-title-wrapper">
+    <h2 class="article-title">
+      <a href="{{ .RelPermalink }}"> {{- .Title -}} </a>
+    </h2>
+
+    {{ with .Params.description }}
+    <h3 class="article-subtitle">{{ . }}</h3>
+    {{ end }}
+  </div>
+
+  {{ $showReadingTime := .Params.readingTime | default
+  (.Site.Params.article.readingTime) }} {{ $showDate := not .Date.IsZero }} {{
+  $showFooter := or $showDate $showReadingTime }} {{ if $showFooter }}
+  <footer class="article-time">
+    <!-- 左侧：包含发布时间和更新时间的容器 -->
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <!-- 1. 始终显示发布时间 -->
+      <div class="article-date" style="display: flex; align-items: center">
+        {{ partial "helper/icon" "date" }}
+        <span style="margin-left: 5px; font-size: 0.9rem">发布于: </span>
+        <time
+          class="article-time--published"
+          datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'
+          style="margin-left: 5px"
+        >
+          {{- .Date | time.Format (or .Site.Params.dateFormat.published
+          "2006-01-02") -}}
+        </time>
+      </div>
+
+      <!-- 2. 如果更新时间不等于发布时间，则在下方显示更新时间 -->
+      {{ if ne .Lastmod .Date }}
+      <div
+        class="article-lastmod"
+        style="
+          display: flex;
+          align-items: center;
+          color: var(--card-text-color-secondary);
+          opacity: 0.8;
+        "
+      >
+        {{ partial "helper/icon" "clock" }}
+        <span style="margin-left: 5px; font-size: 0.9rem">更新于: </span>
+        <time
+          datetime="{{ .Lastmod.Format `2006-01-02T15:04:05Z07:00` }}"
+          style="margin-left: 5px"
+        >
+          {{ .Lastmod.Format ( or .Site.Params.dateFormat.lastUpdated
+          "2006-01-02 15:04" ) }}
+        </time>
+      </div>
+      {{ end }}
+    </div>
+
+    <!-- 右侧：阅读量统计 (保持你之前的样式) -->
+    <div
+      class="article-view"
+      style="align-items: center; gap: 5px; margin-left: auto"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-eye"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="12" cy="12" r="2"></circle>
+        <path
+          d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s10 2.333 10 7"
+        ></path>
+      </svg>
+      <span class="temp-pv-container">
+        <span class="temp-pv-value"></span> 次
+      </span>
+    </div>
+  </footer>
+  {{ end }} {{ if .IsTranslated }}
+  <footer class="article-translations">
+    {{ partial "helper/icon" "language" }}
+    <div>
+      {{ range .Translations }}
+      <a href="{{ .Permalink }}" class="link">{{ .Language.LanguageName }}</a>
+      {{ end }}
+    </div>
+  </footer>
+  {{ end }}
+</div>

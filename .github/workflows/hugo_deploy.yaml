@@ -1,0 +1,75 @@
+name: Build and Deploy Hugo Site
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/**/*.md'
+      - 'static/**'
+      - 'layouts/**'
+      - 'assets/**'
+  workflow_dispatch:           # 支持手动触发
+
+concurrency:
+  group: deploy-pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout source repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.DEPLOY_TOKEN }}  # 用于图片上传需要推送权限
+
+      - name: Git Configuration
+        run: |
+          git config --global core.quotePath false
+          git config --global core.autocrlf false
+          git config --global core.safecrlf true
+          git config --global core.ignorecase false
+
+      # ============ 迁移 CSDN 图片 ============
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          pip install requests
+
+      - name: Migrate CSDN images
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: |
+          python migrate_csdn_images.py
+
+      # ============ 构建 Hugo 站点 ============
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Build site
+        run: hugo -D  # 包含 draft 文章
+
+      # ============ 部署到 GitHub Pages ============
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.DEPLOY_TOKEN }}   # 用 PAT
+          external_repository: iamxurulin/iamxurulin.github.io
+          publish_branch: main
+          publish_dir: ./public
+          force_orphan: true
+          git_push_flags: '--force'                   # 关键！强制推送，彻底解决冲突
+          commit_message: "auto deploy: ${{ github.event.head_commit.message }}"
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
