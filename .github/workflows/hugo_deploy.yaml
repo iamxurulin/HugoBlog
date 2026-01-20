@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.DEPLOY_TOKEN }}  # 用于图片上传需要推送权限
+          token: ${{ secrets.PERSONAL_TOKEN }}  # 用于图片上传需要推送权限
 
       - name: Git Configuration
         run: |
@@ -46,7 +46,7 @@ jobs:
 
       - name: Migrate CSDN images
         env:
-          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           python migrate_csdn_images.py
 
@@ -64,7 +64,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.DEPLOY_TOKEN }}   # 用 PAT
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}   # 改成 personal_token
           external_repository: iamxurulin/iamxurulin.github.io
           publish_branch: main
           publish_dir: ./public
