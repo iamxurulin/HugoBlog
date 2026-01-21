@@ -115,3 +115,62 @@ input:hover,
         }
     }
 }
+
+/* ================ 相关文章卡片优化：统一变小、更紧凑（无需封面图） ================ */
+.article-related {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.article-related .related-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--card-background);
+  border-radius: var(--card-border-radius);
+  padding: 18px 22px !important;     /* 适当内边距 */
+  height: 90px !important;           /* 统一固定小高度 */
+  box-shadow: var(--shadow-l1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.article-related .related-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-l2);
+}
+
+/* 标题样式优化 */
+.article-related .related-item h3 {
+  font-size: 1.05rem !important;
+  margin: 0;
+  line-height: 1.4;
+  color: var(--card-text-color-main);
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;             /* 最多显示2行标题 */
+  -webkit-box-orient: vertical;
+}
+
+/* 如果万一有封面图，也压缩高度（防止突兀） */
+.article-related .related-image {
+  display: none !important;          /* 完全隐藏图片区域 */
+}
+
+/* 手机端适配 */
+@media (max-width: 768px) {
+  .article-related {
+    grid-template-columns: 1fr;
+  }
+  
+  .article-related .related-item {
+    height: 80px !important;
+    padding: 16px 18px !important;
+  }
+}

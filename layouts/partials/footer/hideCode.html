@@ -41,40 +41,126 @@
     }
 </style>
 
+<style>
+    .highlight {
+        max-height: 400px;
+        overflow: hidden;
+        position: relative; /* 重要：让 code-more-box 绝对定位生效 */
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        pointer-events: none; /* 让底层代码可选中 */
+    }
+
+    .code-more-btn {
+        pointer-events: auto; /* 按钮可点击 */
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: var(--card-background);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    }
+
+    .code-more-img {
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+
+    /* 暗色模式适配 */
+    [data-scheme="dark"] .code-more-box {
+        background-image: linear-gradient(to bottom, rgba(30,30,40,0), #1e1e28);
+    }
+    [data-scheme="dark"] .code-more-btn {
+        background: var(--card-background);
+    }
+</style>
+
 <script>
   function initCodeMoreBox() {
-    let codeBlocks = document.querySelectorAll(".highlight");
-    if (!codeBlocks) {
-      return;
-    }
+    const codeBlocks = document.querySelectorAll(".highlight:not(.code-inited)");
+    
     codeBlocks.forEach(codeBlock => {
-      // 校验是否overflow
-      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+      // 标记已处理，避免重复添加
+      codeBlock.classList.add("code-inited");
+
+      // 判断是否需要折叠
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight + 5) { // +5 容差
         return;
       }
-      // 元素初始化
-      // codeMoreBox
-      let codeMoreBox = document.createElement('div');
+
+      // 创建遮罩层
+      const codeMoreBox = document.createElement('div');
       codeMoreBox.classList.add('code-more-box');
-      // codeMoreBtn
-      let codeMoreBtn = document.createElement('span');
+
+      const codeMoreBtn = document.createElement('span');
       codeMoreBtn.classList.add('code-more-btn');
-      codeMoreBtn.addEventListener('click', () => {
+      codeMoreBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         codeBlock.classList.add('code-show');
         codeMoreBox.style.display = 'none';
-        // 触发resize事件，重新计算目录位置
-        window.dispatchEvent(new Event('resize'))
-      })
-      // img
-      let img = document.createElement('img');
+        // 触发 resize，让目录等组件重新计算
+        window.dispatchEvent(new Event('resize'));
+      });
+
+      const img = document.createElement('img');
       img.classList.add('code-more-img');
-      img.src = {{ (resources.Get "icons/codeMore.png").Permalink }}
-      // 元素添加
+      img.src = {{ (resources.Get "icons/codeMore.png").Permalink | safeURL }};
+      img.alt = "展开代码";
+
       codeMoreBtn.appendChild(img);
       codeMoreBox.appendChild(codeMoreBtn);
-      codeBlock.appendChild(codeMoreBox)
-    })
+      codeBlock.appendChild(codeMoreBox);
+    });
   }
-  
-  initCodeMoreBox();
+
+  // 页面首次加载
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCodeMoreBox);
+  } else {
+    initCodeMoreBox();
+  }
+
+  // PJAX 或其他无刷新跳转后重新初始化（关键！）
+  document.addEventListener('pjax:complete', initCodeMoreBox);
+  document.addEventListener('swup:contentReplaced', initCodeMoreBox); // 如果用 swup
+  window.addEventListener('popstate', initCodeMoreBox); // 浏览器后退也触发
+
+  // 可选：观察 DOM 变化（最保险，适用于任何动态加载）
+  const observer = new MutationObserver((mutations) => {
+    let shouldRun = false;
+    mutations.forEach(mutation => {
+      if (mutation.addedNodes.length) {
+        shouldRun = true;
+      }
+    });
+    if (shouldRun) {
+      // 延迟一点确保 DOM 渲染完
+      setTimeout(initCodeMoreBox, 100);
+    }
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
 </script>
