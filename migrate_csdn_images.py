@@ -11,7 +11,7 @@ GH_TOKEN = os.getenv("PERSONAL_TOKEN")
 if not GH_TOKEN:
     raise ValueError("PERSONAL_TOKEN 未在 GitHub Secrets 中设置！")
 
-REPO = "iamxurulin/iamxurulin.github.io-main"  # 你的源码仓库
+REPO = "iamxurulin/HugoBlog"  # 你的源码仓库
 BRANCH = "main"
 IMAGES_DIR = "static/images"  # Hugo 静态资源目录
 
