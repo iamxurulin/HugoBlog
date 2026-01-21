@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/877f3d9774164b079f36fad39a2074ff.jpeg#pic_center)
+![在这里插入图片描述](/images/877f3d9774164b079f36fad39a2074ff-b81e125e.jpeg)
 
 ### 问题分析
 双端队列按照y-x的值从大到小组织，队列中存储点的编号。

@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/86010b83f2a64a51ba6dff8a4c931ccb.jpeg#pic_center)
+![在这里插入图片描述](/images/86010b83f2a64a51ba6dff8a4c931ccb-ec7be3de.jpeg)
 ### 求解代码
 
 ```java

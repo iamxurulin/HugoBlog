@@ -11,8 +11,8 @@ draft: false
 首先，电脑的配置是Windows 11 专业版+VMware Workstation Pro 15.5.
 ### 1.因为开启了Hyper -V，所以会出现如下问题：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/1d4a490dde974e4887869fc17eed7a26.png#pic_center)
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/cf63d9eb6b4341dda230c3fd0dc302e5.png#pic_center)
+![在这里插入图片描述](/images/1d4a490dde974e4887869fc17eed7a26-6290f395.png)
+![在这里插入图片描述](/images/cf63d9eb6b4341dda230c3fd0dc302e5-20ffa8e3.png)
 根据网上查找到的一些解决方案，将Hyper -V和Device Guard这些禁用掉，以为可以解决这个问题，然而。。。。。。
 出现如下问题2.。
 ### 2.Your device ran into a problem and needs to restart. We're just collecting some error info, and then you can restart.

@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/54ab287974d947ea8d6fa641a28b04d2.jpeg#pic_center)
+![在这里插入图片描述](/images/54ab287974d947ea8d6fa641a28b04d2-ab422a29.jpeg)
 ### 代码求解
 
 #### smallestDistancePair方法

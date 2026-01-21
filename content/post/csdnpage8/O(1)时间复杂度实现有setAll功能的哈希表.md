@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/c86d966bd006465b8e507847ce7091b4.png#pic_center)
+![在这里插入图片描述](/images/c86d966bd006465b8e507847ce7091b4-a8276071.png)
 ### 代码逻辑
 
 这道题的核心在于:

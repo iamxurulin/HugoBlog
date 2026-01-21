@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/42fea2b7a39b42eaa7219360a945397b.jpeg#pic_center)
+![在这里插入图片描述](/images/42fea2b7a39b42eaa7219360a945397b-9a06441e.jpeg)
 ### 代码求解
 求更高温度出现在几天后，这是一个严格大于的问题，需要使用小压大的单调栈。
 

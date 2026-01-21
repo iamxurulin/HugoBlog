@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2655cb8961e143bea389d9e776ddd4a9.jpeg#pic_center)
+![在这里插入图片描述](/images/2655cb8961e143bea389d9e776ddd4a9-8de16904.jpeg)
 ### 代码求解
 
 要实现每k个一组翻转链表，我们先来手撕一下反转整个链表：

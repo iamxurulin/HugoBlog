@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/06ca2a4f62d2481289f853c58e90eaec.jpeg#pic_center)
+![在这里插入图片描述](/images/06ca2a4f62d2481289f853c58e90eaec-08c07329.jpeg)
 ### 求解思路
 
 这道题将"恰好k种"这个条件转化为两个"最多k种"的问题相减。

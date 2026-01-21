@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/1827dec31efe4ec3b991f2dc8964dc4e.png#pic_center)
+![在这里插入图片描述](/images/1827dec31efe4ec3b991f2dc8964dc4e-6b9a9254.png)
 
 这道题如果用暴力方法，每次更新都要遍历子矩阵内的所有元素，时间复杂度是 O(q×n×m)，数据量大时会超时。
 

@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/5fd0987f02444aa99d1cceded786c92c.jpeg#pic_center)
+![在这里插入图片描述](/images/5fd0987f02444aa99d1cceded786c92c-ae8c430c.jpeg)
 ### 题目分析
 从0~n-1遍历单词，每个单词与后续单词进行比较，如果不在同一集合且相似则合并。
 

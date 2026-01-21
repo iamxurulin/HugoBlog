@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/d875a5fef4b346389e3552e204c7a0c5.png#pic_center)
+![在这里插入图片描述](/images/d875a5fef4b346389e3552e204c7a0c5-723caa1e.png)
 本文采用随机选择算法来解决这道题。
 
 题目要求找到数组 nums 中第 k 大的元素。

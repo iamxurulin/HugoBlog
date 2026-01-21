@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/384d8c6e646e4663a65605949ce9e8e4.png#pic_center)
+![在这里插入图片描述](/images/384d8c6e646e4663a65605949ce9e8e4-71be3928.png)
 
 与[Leetcode380](https://blog.csdn.net/qq_44678890/article/details/153745801?spm=1001.2014.3001.5501)不同的是，这道题**允许元素重复**。
 ### 代码逻辑

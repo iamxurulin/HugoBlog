@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/5382c836dc024de99fb70ee298574370.png#pic_center)
+![在这里插入图片描述](/images/5382c836dc024de99fb70ee298574370-ce902afd.png)
 ### 求解思路
 
 首先计算整个数组的和对p取模得到余数mod，如果mod为0说明已经满足条件直接返回0。

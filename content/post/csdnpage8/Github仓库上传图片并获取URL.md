@@ -27,9 +27,9 @@ draft: false
  - 「Description」：比如“图片存储库”。  
  - 勾选「Public」（必须公开，否则图片URL无法直接访问）。  
  - 勾选「Add a README file」（方便管理）。
-  ![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/d0bf6dbbb2534148bf0ede2462b619aa.png)
+  ![在这里插入图片描述](/images/d0bf6dbbb2534148bf0ede2462b619aa-9e47e9b9.png)
 3.进入创建的仓库（例如 `https://github.com/你的用户名/picture-storage`），上传图片：
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/7054051b810b436593c63fdf44f1e23e.png)
+![在这里插入图片描述](/images/7054051b810b436593c63fdf44f1e23e-8a6e70e7.png)
  - 点击「+」图标，选择「Upload files」 
  - 点击「choose your files」选择本地的图片进行上传
  - 选择好图片后在「Commit changes」区域填写备注（例如“上传头像图片”），然后点击「Commit changes」确认上传。
@@ -41,6 +41,6 @@ draft: false
  - 在新的标签页地址栏的URL就是Raw链接（例如
    `https://raw.githubusercontent.com/你的用户名/picture-storage/main/xxx.png`），直接复制即可。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/ec0bd540ed334d9fbecf4da0186e35bf.png)
+![在这里插入图片描述](/images/ec0bd540ed334d9fbecf4da0186e35bf-7b091d03.png)
 
 通过以上步骤，即可快速通过GitHub上传图片并获取可用的URL，适用于Markdown文档、个人博客、社交平台等场景。

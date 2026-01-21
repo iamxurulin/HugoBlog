@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e97d9bdd9fa0407bbc2e587292a523ef.png#pic_center)
+![在这里插入图片描述](/images/e97d9bdd9fa0407bbc2e587292a523ef-a17610ed.png)
 
 LRU的核心思想是当缓存空间满了,优先淘汰最久未被使用的数据。
 

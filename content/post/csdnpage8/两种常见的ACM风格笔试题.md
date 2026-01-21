@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/97697dcb81c94d7c84c7b13fc6ceb4da.png#pic_center)
+![在这里插入图片描述](/images/97697dcb81c94d7c84c7b13fc6ceb4da-8385f4a3.png)
 在算法笔试中，一般有两种风格，一种是填函数风格，可以粗暴地理解为Leetcode中提交的风格，另一种是ACM风格，可以认为是要自己写输入输出的风格，比如华为笔试的风格。
 
 如果是ACM风格，尽量不要使用Scanner、System.out，因为他们的IO效率非常慢。

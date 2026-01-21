@@ -9,7 +9,7 @@ draft: false
 ---
 
 安装好Docker启动之后报这个错误：
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/f030e755fc2c428282412b83b82ea615.jpeg#pic_center)
+![在这里插入图片描述](/images/f030e755fc2c428282412b83b82ea615-5bfd61da.jpeg)
 有博客说是因为没有启动【虚拟机平台】，于是我Win+r➡【optionalfeatures】，看了一下发现我的【Virtual Machine platform】是启动的，那到底是什么原因呢？
 
 问了一下AI，说这个错误表示 Windows 的 HCS (Host Compute Service) 服务不可用。
@@ -31,7 +31,7 @@ sc.exe start vmms
 wsl --shutdown
 ```
 然后重新启动 Docker Desktop，出现这个报错：
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/d5c28c0a71ac4e509ea441f7c61d7c3f.png)
+![在这里插入图片描述](/images/d5c28c0a71ac4e509ea441f7c61d7c3f-4b4b7bde.png)
 这个错误表示虚拟化未启用。但是我打开任务管理器→ 切换到"性能"选项卡 → 点击"CPU"，底部显示 "虚拟化: 已启用"。
 
 接下来尝试查看 Hypervisor 状态，

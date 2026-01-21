@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/8fa66baf34d24e65b9f184c5fe301b1e.jpeg#pic_center)
+![在这里插入图片描述](/images/8fa66baf34d24e65b9f184c5fe301b1e-8f2f9e4f.jpeg)
 ### 求解思路
 
 这道题我们把数组想象成一个特殊的容器,理想情况下索引 0 应该放数字 1,索引 1 应该放数字 2,以此类推。

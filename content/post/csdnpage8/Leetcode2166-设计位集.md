@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3d05d94e1d2b4b86bc623e32f852317e.png#pic_center)
+![在这里插入图片描述](/images/3d05d94e1d2b4b86bc623e32f852317e-e52cccd9.png)
 在处理大规模布尔数组时,我们经常面临空间和时间效率的双重挑战。
 
 如果用普通的 boolean 数组,每个元素至少占用 1 字节,当数据量达到百万级别时,内存开销会非常可观。

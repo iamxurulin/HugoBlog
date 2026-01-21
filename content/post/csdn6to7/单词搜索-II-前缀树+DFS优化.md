@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/c09ec444aeb24eec8767d9c2304f1297.png#pic_center)
+![在这里插入图片描述](/images/c09ec444aeb24eec8767d9c2304f1297-713d679a.png)
 ### 求解思路
 首先将所有目标单词构建成一棵前缀树，然后遍历网格中的每个位置作为起点进行DFS搜索，在搜索过程中同时在前缀树上行走，如果当前路径在前缀树中不存在则立即剪枝返回，这样可以一次DFS同时匹配多个单词。
 

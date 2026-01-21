@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/6c4b7ef4067c407aa6f51d16f728b362.png)
+![在这里插入图片描述](/images/6c4b7ef4067c407aa6f51d16f728b362-cc3fe4f0.png)
 这个错误是编辑器的 CSS 校验器 不认识 Hugo 模板语法导致的**假报错**。
 
 主要是在项目的 `terms.html` 文件中，有一段内联 CSS：
@@ -34,5 +34,5 @@ CSSbackground: linear-gradient(135deg,
 ```
 
 之后错误❌就消失了：
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3ae06805320e482b8bf9ef0b1ce73d92.png)
+![在这里插入图片描述](/images/3ae06805320e482b8bf9ef0b1ce73d92-73777bf3.png)
 

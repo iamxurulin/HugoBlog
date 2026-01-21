@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/ba4d56a773ae44a29e485735285a7b02.png#pic_center)
+![在这里插入图片描述](/images/ba4d56a773ae44a29e485735285a7b02-c18e2070.png)
 这个问题在实际开发中也有应用场景,比如检测循环引用、内存泄漏分析等。
 
 本文介绍Floyd判圈算法来解决这道题。

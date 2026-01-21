@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/5db5cfd298f0471e87da4c30320e9eec.jpeg#pic_center)
+![在这里插入图片描述](/images/5db5cfd298f0471e87da4c30320e9eec-0b9698ff.jpeg)
 ### 求解思路
 
 这道题我们可以把问题想象成"欠债还债"的过程:

@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/40c74cc72f5940948200a6ca63fecd4e.jpeg#pic_center)
+![在这里插入图片描述](/images/40c74cc72f5940948200a6ca63fecd4e-d1eadd91.jpeg)
 ### 求解思路
 构建大压小的单调栈。
 

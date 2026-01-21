@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/d43a596609a8437293f4945618aeafc4.jpeg#pic_center)
+![在这里插入图片描述](/images/d43a596609a8437293f4945618aeafc4-44369a73.jpeg)
 
 ### 问题分析
 这道题采用小压大的单调栈求解。

@@ -8,8 +8,8 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2976e7749f424bddb98a4782b6518fc2.jpeg#pic_center)
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/27be018f117b4a458f0f0aa9da5f25a8.jpeg#pic_center)
+![在这里插入图片描述](/images/2976e7749f424bddb98a4782b6518fc2-5e0c3708.jpeg)
+![在这里插入图片描述](/images/27be018f117b4a458f0f0aa9da5f25a8-c99c269b.jpeg)
 ### 求解代码
 
 #### maxRunTime方法

@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/aae4bacca2614ed299552c193dcd59a5.jpeg#pic_center)
+![在这里插入图片描述](/images/aae4bacca2614ed299552c193dcd59a5-10beaf21.jpeg)
 ### 求解代码
 准备一个数组作为双端队列deque，用h（head）和t（tail）表示队列的头和尾位置。
 

@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3b9a4c50ff8f4c12be90410f74c73d10.png#pic_center)
+![在这里插入图片描述](/images/3b9a4c50ff8f4c12be90410f74c73d10-c2902b52.png)
 ### 求解思路
 
 这题如果直接套用普通全排列的模板，会得到 6 个结果，其中有重复！因此，难点在于去重。

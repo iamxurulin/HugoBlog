@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/5e7f25c11f474fcf8b173c1fc41b772c.png#pic_center)
+![在这里插入图片描述](/images/5e7f25c11f474fcf8b173c1fc41b772c-da822faf.png)
 
 今天来看一个经典的树形动态规划问题——**打家劫舍III**。
 ### 核心思路

@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/b8abb91dbc8644cc9a260988f3963f82.jpeg#pic_center)
+![在这里插入图片描述](/images/b8abb91dbc8644cc9a260988f3963f82-2e160151.jpeg)
 ### 题目分析
 要区分二维矩阵中的每个1，需要将二维问题转化为一维编号问题。
 

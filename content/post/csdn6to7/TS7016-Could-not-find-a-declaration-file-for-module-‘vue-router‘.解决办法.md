@@ -82,5 +82,5 @@ declare module 'vue-router' {
 ```
 这下可以了：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/7453f1b5fab04c05866572bf0708cbca.png)
+![在这里插入图片描述](/images/7453f1b5fab04c05866572bf0708cbca-342a3bba.png)
 

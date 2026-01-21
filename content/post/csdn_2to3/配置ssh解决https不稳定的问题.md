@@ -11,13 +11,13 @@ draft: false
 将本地文件推送到github仓库时会遇到各种各样的问题，比如：
 
 <!-- 这是一张图片，ocr 内容为： -->
-![](https://i-blog.csdnimg.cn/img_convert/64fd978473f1f882604b64b66b938fb9.png)
+![](/images/64fd978473f1f882604b64b66b938fb9-79183cab.png)
 
  <!-- 这是一张图片，ocr 内容为： -->
-![](https://i-blog.csdnimg.cn/img_convert/5019cbd27b7de37ba1b02dde823b5f11.png)
+![](/images/5019cbd27b7de37ba1b02dde823b5f11-a57ba6db.png)
 
 <!-- 这是一张图片，ocr 内容为： -->
-![](https://i-blog.csdnimg.cn/img_convert/ee8bd4a0962c027db3a089bbde691a76.png)
+![](/images/ee8bd4a0962c027db3a089bbde691a76-746345af.png)
 
 为了解决这个GitHub 官方都承认的 HTTPS 不稳定问题，可以考虑使用ssh：
 

@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/503f5cb71e4b489584c3fe47b82426c5.jpeg#pic_center)
+![在这里插入图片描述](/images/503f5cb71e4b489584c3fe47b82426c5-5abf5f4d.jpeg)
 
 ### 题目分析
 遍历数组，对于每个位置i，假设子数据必须以i作为右边界，求出往左延伸多短，能够让累加和大于等于K，最后从所有答案中选择最小值。

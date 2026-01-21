@@ -16,7 +16,7 @@ sudo docker run hello-world
 测试Docker是否安装成功。
 
 出现以下问题：
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e82fe1dbc7154fd58ad712873f56edd1.png)
+![在这里插入图片描述](/images/e82fe1dbc7154fd58ad712873f56edd1-c370fc27.png)
 
 这个错误是因为 Docker 无法连接到 Docker registry 来拉取镜像。
 
@@ -52,7 +52,7 @@ sudo docker info | grep -A 5 "Registry Mirrors"
 
 出现以下信息：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/f98a1d24d57942af9b140e3d453d3c3c.png)
+![在这里插入图片描述](/images/f98a1d24d57942af9b140e3d453d3c3c-0aa8bff4.png)
 说明配置已经生效了。
 
 最后再测试运行：
@@ -62,5 +62,5 @@ sudo docker run hello-world
 ```
 看到有如下“Hello from Docker!”的输出，表明Docker已经安装成功了，并且可以拉取镜像去执行了。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/dfba5f5fc36941539cf7228dea393a88.png)
+![在这里插入图片描述](/images/dfba5f5fc36941539cf7228dea393a88-62434559.png)
 

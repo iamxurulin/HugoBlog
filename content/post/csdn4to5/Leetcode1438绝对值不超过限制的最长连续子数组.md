@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/15c5340cf8e0442ba6f39ab6f9acf33f.jpeg#pic_center)
+![在这里插入图片描述](/images/15c5340cf8e0442ba6f39ab6f9acf33f-82b6a8e7.jpeg)
 
 ### 题目分析
 如果一个子数组达标，也就是它内部的最大值减去最小值小于等于给定限制limit， 则其内部任意小范围一定也达标，因为范围变小，最大值只可能变小或者不变，而最小值只可能变大或者不变。

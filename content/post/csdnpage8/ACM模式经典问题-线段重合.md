@@ -14,7 +14,7 @@ draft: false
 
 本文分析一道经典的线段重合问题。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/6b23b0e88cbe49288d44cd05d9f8054d.png#pic_center)
+![在这里插入图片描述](/images/6b23b0e88cbe49288d44cd05d9f8054d-6ef9c880.png)
 ### 代码逻辑
 #### 输入输出
 ```java

@@ -9,7 +9,7 @@ draft: false
 ---
 
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/ed1235d75ede4586a59dcf1627982cbf.png#pic_center)
+![在这里插入图片描述](/images/ed1235d75ede4586a59dcf1627982cbf-eed6eada.png)
 这道题的难点在于如何同时满足三个 O(1) 操作,尤其是**随机获取元素**。
 
 ### 代码逻辑

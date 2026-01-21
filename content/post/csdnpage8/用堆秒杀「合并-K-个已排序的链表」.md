@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/63434de59415440ea0dc5ad147cacf25.png#pic_center)
+![在这里插入图片描述](/images/63434de59415440ea0dc5ad147cacf25-c9ca6045.png)
 这道题的思路是用小根堆 “盯紧” 最小节点。
 
 核心步骤如下：

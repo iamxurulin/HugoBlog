@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2507893a01ad480b893d4d46b76f2df3.jpeg#pic_center)
+![在这里插入图片描述](/images/2507893a01ad480b893d4d46b76f2df3-1477cbdf.jpeg)
 ### 解题思路
 
 这道题我们把工作时间大于8小时的天数记为+1,小于等于8小时的记为-1,这样问题就转化为求和大于0的最长子数组。

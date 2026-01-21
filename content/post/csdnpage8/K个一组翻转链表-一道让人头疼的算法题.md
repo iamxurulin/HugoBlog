@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/f70b0c71aae544a88d99dce73574afc6.png#pic_center)
+![在这里插入图片描述](/images/f70b0c71aae544a88d99dce73574afc6-31b7a283.png)
 这道题的难点不在于算法本身，而在于细节处理。
 
 ### 代码逻辑
