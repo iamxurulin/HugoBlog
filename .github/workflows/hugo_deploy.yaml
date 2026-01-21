@@ -50,33 +50,35 @@ jobs:
         run: |
           python migrate_csdn_images.py
 
-      # ============ 👇 修正后的提交步骤 👇 ============
+      # ============ 👇 请完整复制并覆盖这一步 👇 ============
       - name: Commit and Push Markdown changes
         run: |
-          # 1. 配置 Git 用户身份
+          # 1. 配置用户
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-          # 2. 先检查有没有修改，如果有，先 Commit 到本地仓库
-          # (这样工作区就干净了，git pull --rebase 就不会报错了)
+          
+          # 2. 先检查本地是否有 Python 脚本修改过的文件
           if [[ -n $(git status --porcelain content/) ]]; then
-            echo "检测到 Markdown 文件链接已更新，准备提交..."
+            echo "检测到 Markdown 文件链接已更新，先提交本地修改..."
             
+            # --- 关键改变：先 Commit，锁住修改 ---
             git add content/
             git commit -m "Auto update markdown links (CSDN migration) [skip ci]"
             
-            echo "本地修改已提交，准备拉取远程图片更新..."
+            echo "本地已提交，现在拉取远程图片的变动..."
             
-            # 3. 现在的状态：本地有 Markdown 的 Commit，远程有 Python 脚本上传图片的 Commit
-            # 执行 rebase，把本地的 Commit 接到远程 Commit 的后面
+            # --- 关键改变：Commit 之后再 Pull ---
+            # 这样 Git 就知道如何合并了（Rebase 策略）
             git pull origin main --rebase
             
-            # 4. 推送最终结果
+            # 3. 最后一起推送
             git push origin main
-            echo "Markdown 文件更新已推送到仓库。"
+            echo "✅ 成功：Markdown 更新已推送到仓库。"
             
           else
-            echo "Markdown 文件没有变化，只拉取最新代码..."
+            echo "Markdown 文件没有变化。"
+            # 即使没变化，为了保险起见，也可以拉取一下最新代码，但不强求
+            # 如果这里没有任何提交，不 pull 也行，或者为了后续步骤稳妥：
             git pull origin main --rebase
           fi
 
