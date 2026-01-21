@@ -7,7 +7,7 @@ links:
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
   - title: CSDN
     description: CSDN 是中国专业的IT技术社区.
-    website: https://blog.csdn.net/qq_44678890
+    website: https://iamxurulin.blog.csdn.net/
     image: csdn.png
 menu:
     main: 

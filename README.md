@@ -35,12 +35,6 @@
    - 强制部署到 `iamxurulin.github.io` 仓库的 main 分支
 4. GitHub Pages 自动更新，几分钟内新文章上线
 
----
-
-**维护者**：[@iamxurulin](https://github.com/iamxurulin)
-
-感谢每一位读者与支持者！
-
 ## 博客首页
 
 ![alt text](/static/image.png)
@@ -52,3 +46,9 @@
 ## 博客标签
 
 ![alt text](/static/image-2.png)
+
+---
+
+**开发和维护者**：[@iamxurulin](https://github.com/iamxurulin)
+
+感谢每一位读者与支持者！
