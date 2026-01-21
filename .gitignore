@@ -3,12 +3,6 @@ resources
 .hugo_build.lock
 hugo.exe
 
-# 忽略 CSDN 迁移的图片（不同步到本地）
-/static/images/*
-
-# 保留空文件夹结构（可选，避免文件夹消失）
-!/static/images/.gitkeep
-
 *.lock
 *.ps1
 .DS_Store

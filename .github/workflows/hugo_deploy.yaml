@@ -5,11 +5,11 @@ on:
     branches:
       - main
     paths:
-      - 'content/**/*.md'
-      - 'static/**'
-      - 'layouts/**'
-      - 'assets/**'
-  workflow_dispatch:           # 支持手动触发
+      - "content/**/*.md"
+      - "static/**"
+      - "layouts/**"
+      - "assets/**"
+  workflow_dispatch: # 支持手动触发
 
 concurrency:
   group: deploy-pages
@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.PERSONAL_TOKEN }}  # 用于图片上传需要推送权限
+          token: ${{ secrets.PERSONAL_TOKEN }} # 用于图片上传需要推送权限
 
       - name: Git Configuration
         run: |
@@ -38,7 +38,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install Python dependencies
         run: |
@@ -50,29 +50,35 @@ jobs:
         run: |
           python migrate_csdn_images.py
 
-      # ============ 👇 新增步骤：保存修改后的 Markdown 文件 👇 ============
+      # ============ 👇 修正后的提交步骤 👇 ============
       - name: Commit and Push Markdown changes
         run: |
           # 1. 配置 Git 用户身份
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # 2. 关键！拉取刚才 Python 脚本上传图片产生的远程变动，防止冲突
-          git pull origin main --rebase
-          
-          # 3. 检查 content 目录是否有变化（链接被替换）
+
+          # 2. 先检查有没有修改，如果有，先 Commit 到本地仓库
+          # (这样工作区就干净了，git pull --rebase 就不会报错了)
           if [[ -n $(git status --porcelain content/) ]]; then
-            echo "检测到 Markdown 文件链接已更新，正在提交..."
-            git add content/
+            echo "检测到 Markdown 文件链接已更新，准备提交..."
             
-            # 4. 提交并推送，带上 [skip ci] 防止死循环
+            git add content/
             git commit -m "Auto update markdown links (CSDN migration) [skip ci]"
+            
+            echo "本地修改已提交，准备拉取远程图片更新..."
+            
+            # 3. 现在的状态：本地有 Markdown 的 Commit，远程有 Python 脚本上传图片的 Commit
+            # 执行 rebase，把本地的 Commit 接到远程 Commit 的后面
+            git pull origin main --rebase
+            
+            # 4. 推送最终结果
             git push origin main
             echo "Markdown 文件更新已推送到仓库。"
+            
           else
-            echo "Markdown 文件没有变化，跳过提交。"
+            echo "Markdown 文件没有变化，只拉取最新代码..."
+            git pull origin main --rebase
           fi
-      # ============ 👆 新增步骤结束 👆 ============
 
       # ============ 构建 Hugo 站点 ============
       - name: Setup Hugo
@@ -82,7 +88,7 @@ jobs:
           extended: true
 
       - name: Build site
-        run: hugo -D  # 包含 draft 文章
+        run: hugo -D # 包含 draft 文章
 
       # ============ 部署到 GitHub Pages ============
       - name: Deploy to GitHub Pages
