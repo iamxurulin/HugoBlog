@@ -50,6 +50,30 @@ jobs:
         run: |
           python migrate_csdn_images.py
 
+      # ============ 👇 新增步骤：保存修改后的 Markdown 文件 👇 ============
+      - name: Commit and Push Markdown changes
+        run: |
+          # 1. 配置 Git 用户身份
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # 2. 关键！拉取刚才 Python 脚本上传图片产生的远程变动，防止冲突
+          git pull origin main --rebase
+          
+          # 3. 检查 content 目录是否有变化（链接被替换）
+          if [[ -n $(git status --porcelain content/) ]]; then
+            echo "检测到 Markdown 文件链接已更新，正在提交..."
+            git add content/
+            
+            # 4. 提交并推送，带上 [skip ci] 防止死循环
+            git commit -m "Auto update markdown links (CSDN migration) [skip ci]"
+            git push origin main
+            echo "Markdown 文件更新已推送到仓库。"
+          else
+            echo "Markdown 文件没有变化，跳过提交。"
+          fi
+      # ============ 👆 新增步骤结束 👆 ============
+
       # ============ 构建 Hugo 站点 ============
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -64,11 +88,12 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}   # 改成 personal_token
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: iamxurulin/iamxurulin.github.io
           publish_branch: main
           publish_dir: ./public
           force_orphan: true
+          # git_push_flags: '--force'  <-- 删除了这行无效配置，警告会消失
           commit_message: "auto deploy: ${{ github.event.head_commit.message }}"
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"

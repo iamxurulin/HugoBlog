@@ -55,7 +55,8 @@ def upload_image(content, path):
     
     # 上传新图片
     data = {
-        "message": f"Add image: {os.path.basename(path)} (CSDN migration)",
+        # 重点：加上 [skip ci]，告诉 GitHub Actions 别因为这次提交而再次启动
+        "message": f"Add image: {os.path.basename(path)} (CSDN migration) [skip ci]",
         "content": base64.b64encode(content).decode('utf-8'),
         "branch": BRANCH
     }
