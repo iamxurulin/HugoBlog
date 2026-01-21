@@ -69,7 +69,6 @@ jobs:
           publish_branch: main
           publish_dir: ./public
           force_orphan: true
-          git_push_flags: '--force'                   # 关键！强制推送，彻底解决冲突
           commit_message: "auto deploy: ${{ github.event.head_commit.message }}"
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
