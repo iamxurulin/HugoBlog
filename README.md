@@ -37,15 +37,15 @@
 
 ## 博客首页
 
-![alt text](/static/image.png)
+![alt text](image.png)
 
 ## 博客分类
 
-![alt text](/static/image-1.png)
+![alt text](image-1.png)
 
 ## 博客标签
 
-![alt text](/static/image-2.png)
+![alt text](image-2.png)
 
 ---
 
