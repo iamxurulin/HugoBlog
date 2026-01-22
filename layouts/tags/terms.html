@@ -2,125 +2,147 @@
 
 {{ define "main" }}
 <article>
-    <div class="tag-cloud-page">
-        <header class="page-header">
-            <h1>🏷️ 标签</h1>
-            <p class="page-description">共有 {{ len .Site.Taxonomies.tags }} 个标签,{{ len .Site.RegularPages }} 篇文章</p>
+    <div class="tags-page">
+        <!-- 头部：透明背景 + 强文字阴影 -->
+        <header class="page-header-transparent">
+            <h1>🏷️ 标签云</h1>
+            {{ $total := len .Site.RegularPages }}
+            {{ $realCount := sub $total 4 }}
+            <p class="page-description">
+                汇聚 <strong>{{ len .Site.Taxonomies.tags }}</strong> 个技术视点，
+                关联 <strong>{{ if gt $realCount 0 }}{{ $realCount }}{{ else }}0{{ end }}</strong> 篇内容
+            </p>
         </header>
 
         {{ if gt (len .Site.Taxonomies.tags) 0 }}
         <div class="tag-cloud-container">
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
             {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-            {{ $count := len $taxonomy }}
-            {{ $size := add 1.0 (mul (div (float $count) 8.0) 0.6) }}
-            <a href="{{ .Permalink }}" class="tag-cloud-item" style="font-size: {{ $size }}rem;">
-                <span class="tag-name">{{ .Title }}</span>
-                <span class="tag-count">{{ $count }}</span>
+
+            {{ $len := len .Title }}
+            {{ $colorClass := printf "tag-color-%d" (mod $len 6) }}
+
+            <a href="{{ .Permalink }}" class="tag-chip {{ $colorClass }}">
+                <span class="tag-text">{{ .Title }}</span>
+                <span class="tag-num">{{ len $taxonomy }}</span>
             </a>
             {{ end }}
             {{ end }}
         </div>
         {{ else }}
-        <div class="empty-state">
-            <p>暂无标签</p>
-        </div>
+        <div class="empty-state"><p>暂无标签</p></div>
         {{ end }}
     </div>
 </article>
 
 <style>
-.tag-cloud-page {
+/* 页面容器 */
+.tags-page {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-.page-header {
+/* 头部 */
+.page-header-transparent {
     text-align: center;
     margin-bottom: 60px;
 }
-
-.page-header h1 {
-    font-size: 2.5rem;
+.page-header-transparent h1 {
+    font-size: 3rem;
     margin-bottom: 15px;
-    color: var(--card-text-color-main);
-    font-weight: bold;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.6), 0 0 15px rgba(0,0,0,0.8);
 }
-
 .page-description {
-    font-size: 1.1rem;
-    color: var(--card-text-color-secondary);
+    font-size: 1.3rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.6), 0 0 10px rgba(0,0,0,0.8);
+}
+.page-description strong {
+    color: #65bbee;
+    font-size: 1.6rem;
+    margin: 0 6px;
 }
 
+/* 标签容器 */
 .tag-cloud-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 15px;
-    padding: 40px;
-    background: var(--card-background);
-    border-radius: 15px;
-    box-shadow: var(--shadow-l1);
-    min-height: 300px;
+    gap: 25px;
+    background: transparent;
 }
 
-.tag-cloud-item {
+/* ================= 标签主体（透明度 ↑） ================= */
+.tag-chip {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    background: var(--accent-color);
-    color: var(--accent-color-text);
-    border-radius: 25px;
+    padding: 12px 28px;
+    border-radius: 50px;
     text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+
+    /* ⭐ 透明度 */
+    background: rgba(0, 0, 0, 0.45) !important;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.35);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
 
-.tag-cloud-item:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-    background: var(--accent-color-darker);
-}
-
-.tag-name {
-    font-size: 1em;
-}
-
-.tag-count {
-    background: rgba(255,255,255,0.25);
-    padding: 2px 10px;
-    border-radius: 12px;
-    font-size: 0.85em;
-    font-weight: bold;
-}
-
-.empty-state {
-    text-align: center;
-    padding: 80px 20px;
-    color: var(--card-text-color-secondary);
+/* 标签文字 */
+.tag-text {
     font-size: 1.2rem;
+    font-weight: 700;
+    margin-right: 12px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.85);
+    letter-spacing: 0.5px;
 }
 
+/* 数字角标 */
+.tag-num {
+    background: rgba(255,255,255,0.35);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+/* Hover 效果 */
+.tag-chip:hover {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+    border-color: rgba(255,255,255,0.9);
+    background: rgba(0, 0, 0, 0.65) !important;
+}
+.tag-chip:hover .tag-num {
+    background: rgba(255,255,255,0.45);
+}
+
+/* Hover 彩色 */
+.tag-color-0:hover { background: rgba(255,107,107,0.85) !important; }
+.tag-color-1:hover { background: rgba(78,205,196,0.85) !important; }
+.tag-color-2:hover { background: rgba(69,183,209,0.85) !important; }
+.tag-color-3:hover { background: rgba(255,160,122,0.85) !important; }
+.tag-color-4:hover { background: rgba(150,206,180,0.85) !important; }
+.tag-color-5:hover { background: rgba(212,165,165,0.85) !important; }
+
+/* 手机端 */
 @media (max-width: 768px) {
-    .page-header h1 {
-        font-size: 2rem;
-    }
-    
-    .tag-cloud-container {
-        padding: 25px;
-        gap: 10px;
-    }
-    
-    .tag-cloud-item {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
+    .tag-chip { padding: 10px 20px; }
+    .tag-text { font-size: 1rem; }
+    .tag-cloud-container { gap: 15px; }
 }
 </style>
 {{ end }}
