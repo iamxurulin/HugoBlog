@@ -1,176 +1,233 @@
+/* ==========================================================================
+   Custom CSS for Hugo Stack
+   功能：全模式白色侧边栏、大号模式切换按钮、布局优化
+   ========================================================================== */
+
+/* 1. 引入播放器样式 */
 @import "aplayer-light.scss";
 @import "aplayer-dark.scss";
 
-#dark-mode-toggle {
-	margin-bottom: 50px
+/* 2. 鼠标光标样式 */
+body, html, .article-content img {
+    cursor: url(../mouse/default.png), auto !important;
+}
+a:hover, button:hover, .copyCodeButton:hover, #dark-mode-toggle {
+    cursor: url(../mouse/pointer.png), auto;
+}
+input:hover, .site-description, .article-subtitle, .article-content span, .article-content li, .article-content p {
+    cursor: url(../mouse/text.png), auto;
 }
 
-// default光标图片
-body,
-html,
-.article-content img {
-  cursor: url(../mouse/default.png),
-  auto !important;
-}
-
-// pointer光标图片
-a:hover,
-button:hover,
-.copyCodeButton:hover,
-#dark-mode-toggle {
-  cursor: url(../mouse/pointer.png),
-  auto;
-}
-
-// text光标图片
-input:hover,
-.site-description,
-.article-subtitle,
-.article-content span,
-.article-content li,
-.article-content p {
-  cursor: url(../mouse/text.png),
-  auto;
-}
-
+/* 3. 首页文章列表双列布局 */
 @media (min-width: 1024px) {
-  .article-list--compact {
-    display: grid;
-    // 目前是两列，如需三列，则后面再加一个1fr，以此类推
-    grid-template-columns: 1fr 1fr;
-    background: none;
-    box-shadow: none;
-    gap: 1rem;
-
-    article {
-      background: var(--card-background);
-      border: none;
-      box-shadow: var(--shadow-l2);
-      margin-bottom: 8px;
-      margin-right: 8px;
-      border-radius: 16px;
-    }
-  }
-}
-
-
-.highlight {
-  border-radius: var(--card-border-radius);
-  max-width: 100% !important;
-  margin: 0 !important;
-  box-shadow: var(--shadow-l1) !important;
-}
-
-.highlight:before {
-  content: "";
-  display: block;
-  background: url(../icons/macOS-code-header.svg) no-repeat 0;
-  background-size: contain;
-  height: 18px;
-  margin-top: -10px;
-  margin-bottom: 10px;
-}
-[data-scheme="light"] {
-  .alert-note {
-    --card-separator-color: #65bbee;
-    --blockquote-background-color: #e7f2fa;
-  }
-  .alert-tip {
-    --card-separator-color: #55aa55;
-    --blockquote-background-color: #eeffee;
-  }
-  .alert-warn {
-    --card-separator-color: #ffbb78;
-    --blockquote-background-color: #ffeecc;
-  }
-  .alert-error {
-    --card-separator-color: #cc3334;
-    --blockquote-background-color: #ffeeef;
-  }
-}
-
-[data-scheme="dark"] {
-  .alert-note {
-    --card-separator-color: #006699;
-    --blockquote-background-color: #002234;
-  }
-  .alert-tip {
-    --card-separator-color: #336733;
-    --blockquote-background-color: #112310;
-  }
-  .alert-warn {
-    --card-separator-color: #aa5501;
-    --blockquote-background-color: #452300;
-  }
-  .alert-error {
-    --card-separator-color: #880000;
-    --blockquote-background-color: #450000;
-  }
-}
-/* 隐藏文章详情页顶部的封面图 */
-.article-page {
-    .article-header {
-        .article-image {
-            display: none !important;
+    .article-list--compact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: none;
+        box-shadow: none;
+        gap: 1rem;
+        article {
+            background: var(--card-background);
+            border: none;
+            box-shadow: var(--shadow-l2);
+            margin-bottom: 8px;
+            margin-right: 8px;
+            border-radius: 16px;
         }
     }
 }
 
-/* ================ 相关文章卡片优化：统一变小、更紧凑（无需封面图） ================ */
+/* 4. 代码高亮及其他通用样式 */
+.highlight {
+    border-radius: var(--card-border-radius);
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-shadow: var(--shadow-l1) !important;
+}
+.highlight:before {
+    content: "";
+    display: block;
+    background: url(../icons/macOS-code-header.svg) no-repeat 0;
+    background-size: contain;
+    height: 18px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.article-page .article-header .article-image { display: none !important; }
+
+/* 5. 颜色变量定义 (文章卡片背景) */
+[data-scheme="light"] {
+    --card-background: rgba(255, 255, 255, 0.85) !important;
+    .alert-note { --card-separator-color: #65bbee; --blockquote-background-color: #e7f2fa; }
+    .alert-tip { --card-separator-color: #55aa55; --blockquote-background-color: #eeffee; }
+    .alert-warn { --card-separator-color: #ffbb78; --blockquote-background-color: #ffeecc; }
+    .alert-error { --card-separator-color: #cc3334; --blockquote-background-color: #ffeeef; }
+}
+
+[data-scheme="dark"] {
+    --card-background: rgba(40, 40, 40, 0.7) !important; 
+    --body-background: transparent !important;
+    .alert-note { --card-separator-color: #006699; --blockquote-background-color: #002234; }
+    .alert-tip { --card-separator-color: #336733; --blockquote-background-color: #112310; }
+    .alert-warn { --card-separator-color: #aa5501; --blockquote-background-color: #452300; }
+    .alert-error { --card-separator-color: #880000; --blockquote-background-color: #450000; }
+}
+
+/* 相关文章卡片 */
 .article-related {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
-  margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 30px;
 }
-
 .article-related .related-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background: var(--card-background);
-  border-radius: var(--card-border-radius);
-  padding: 18px 22px !important;     /* 适当内边距 */
-  height: 90px !important;           /* 统一固定小高度 */
-  box-shadow: var(--shadow-l1);
-  transition: all 0.3s ease;
-  overflow: hidden;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    padding: 18px 22px !important;
+    height: 90px !important;
+    box-shadow: var(--shadow-l1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
 }
-
-.article-related .related-item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-l2);
-}
-
-/* 标题样式优化 */
+.article-related .related-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-l2); }
 .article-related .related-item h3 {
-  font-size: 1.05rem !important;
-  margin: 0;
-  line-height: 1.4;
-  color: var(--card-text-color-main);
-  word-break: break-word;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;             /* 最多显示2行标题 */
-  -webkit-box-orient: vertical;
+    font-size: 1.05rem !important; margin: 0; line-height: 1.4; color: var(--card-text-color-main);
+    word-break: break-word; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
 }
-
-/* 如果万一有封面图，也压缩高度（防止突兀） */
-.article-related .related-image {
-  display: none !important;          /* 完全隐藏图片区域 */
-}
-
-/* 手机端适配 */
+.article-related .related-image { display: none !important; }
 @media (max-width: 768px) {
-  .article-related {
-    grid-template-columns: 1fr;
-  }
-  
-  .article-related .related-item {
-    height: 80px !important;
-    padding: 16px 18px !important;
-  }
+    .article-related { grid-template-columns: 1fr; }
+    .article-related .related-item { height: 80px !important; padding: 16px 18px !important; }
+}
+
+
+/* ==========================================================================
+   ★★★ 侧边栏 (Sidebar) 统一风格定制区 ★★★
+   ========================================================================== */
+
+/* 1. 容器清理：去掉背景、去掉黑框、去掉磨砂 */
+aside.sidebar .menu,
+aside.sidebar .profile {
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+    border: none !important;
+    margin-top: 5px !important;
+}
+
+aside.sidebar .profile .site-avatar {
+    width: 100px !important;
+    height: 100px !important;
+    margin-bottom: 5px !important;
+    border: 3px solid rgba(255,255,255,0.5); 
+}
+
+/* 2. ★★★ 文字样式统一 (无论亮/暗模式) ★★★ */
+/* 强制所有侧边栏文字为：纯白 + 粗体 + 强力阴影 */
+aside.sidebar .site-name,
+aside.sidebar .site-name a,
+aside.sidebar .site-description,
+aside.sidebar .menu a,
+aside.sidebar .profile .site-name {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    
+    /* 核心：这个阴影让文字在任何背景下都清晰可见 */
+    text-shadow: 2px 2px 0px rgba(0,0,0, 0.5), 0 0 8px rgba(0,0,0, 0.9) !important;
+}
+
+aside.sidebar .site-name {
+    font-size: 1.7rem !important;
+    margin-bottom: 0 !important;
+    display: block;
+}
+
+/* 3. 菜单图标和布局 */
+aside.sidebar .menu li { margin: 0 !important; }
+
+aside.sidebar .menu a {
+    padding: 6px 10px !important;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+    line-height: 1.5 !important;
+    font-size: 1.05rem !important; /* 设定一个标准字号 */
+}
+
+/* 菜单图标 */
+aside.sidebar .menu a svg {
+    stroke: #ffffff !important; /* 强制白色 */
+    stroke-width: 2.2px !important;
+    width: 22px !important;
+    height: 22px !important;
+    margin-right: 12px !important;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0, 0.8));
+}
+
+/* 4. 社交图标 (Github/C) 放大 */
+aside.sidebar .social-menu {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+aside.sidebar .social-menu a svg {
+    stroke: #ffffff !important;
+    width: 32px !important;
+    height: 32px !important;
+    stroke-width: 1.8px !important;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.8));
+    transition: transform 0.2s;
+}
+aside.sidebar .social-menu a:hover svg {
+    transform: scale(1.1);
+    stroke: #65bbee !important;
+}
+
+/* 5. ★★★ 底部“模式切换”按钮大改造 ★★★ */
+#dark-mode-toggle {
+    background: transparent !important;
+    margin-top: 15px !important;
+    padding: 10px !important;
+    display: flex;
+    align-items: center;
+    color: #ffffff !important; /* 文字白色 */
+    
+    /* 关键：让它看起来像上面的菜单项 */
+    font-weight: 700 !important; 
+    font-size: 1.05rem !important; /* 字号和上面的 .menu a 保持一致 */
+    
+    text-shadow: 2px 2px 0px rgba(0,0,0, 0.5), 0 0 8px rgba(0,0,0, 0.9) !important;
+}
+
+/* 隐藏原有文字 */
+#dark-mode-toggle span { display: none !important; }
+
+/* 添加新文字 */
+#dark-mode-toggle::after {
+    content: "模式切换"; 
+    margin-left: 12px;    /* 对齐上面的图标文字间距 */
+    font-size: 1.05rem !important; /* 确保字号一致 */
+}
+
+/* 按钮图标 */
+#dark-mode-toggle svg {
+    stroke: #ffffff !important;
+    width: 22px !important; /* 和上面菜单图标大小一致 */
+    height: 22px !important;
+    stroke-width: 2.2px !important;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0, 0.8));
+}
+
+/* 鼠标悬停统一效果 */
+aside.sidebar .menu a:hover,
+#dark-mode-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px;
+    transform: translateX(5px);
 }
