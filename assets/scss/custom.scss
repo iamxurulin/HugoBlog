@@ -219,27 +219,18 @@ main.main-content {
     padding-bottom: 60px !important; 
 }
 
-/* 2. 强制 Footer 绝对定位到容器的最底部 */
+/* 2. 修复目标元素固定在页面底部正中间 */
 footer.site-footer {
-    position: absolute !important;
-    bottom: 1px !important; /* 钉死在距离底部 15px 的位置 */
-    left: 0 !important;
-    width: 100% !important;  /* 宽度占满整个右侧区域 */
-    
-    /* 强制居中 */
-    text-align: center !important;
-    display: block !important;
-    margin: 0 !important;
-    
-    /* 字体美化：白字 + 黑阴影 */
-    color: #ffffff !important;
-    font-size: 1rem !important;  /* 稍微大一点，看起清楚 */
-    font-weight: 700 !important; /* 加粗 */
-    letter-spacing: 1px;         /* 字间距稍微拉开点，更高级 */
-    text-shadow: 2px 2px 4px rgba(0,0,0, 0.9) !important; /* 强阴影 */
-    
-    /* 确保层级够高，不被背景遮挡 */
-    z-index: 10 !important;
+    position: fixed !important; /* 固定在视口 */
+    bottom: 0 !important; /* 紧贴底部 */
+    left: 50% !important; /* 水平居中 */
+    transform: translateX(-50%) !important; /* 修正居中偏移 */
+    width: auto !important; /* 根据内容调整宽度 */
+    background: transparent !important; /* 移除背景色 */
+    box-shadow: none !important; /* 移除阴影 */
+    border: none !important; /* 移除边框 */
+    z-index: 9999 !important; /* 确保在最上层 */
+    text-align: center !important; /* 文本居中 */
 }
 
 /* 3. 修复 Footer 内部可能的 p 标签干扰 */
@@ -255,3 +246,19 @@ footer.site-footer a {
     text-decoration: none;
     border-bottom: 1px dashed rgba(255,255,255,0.6);
 }
+
+/* Override any theme :before horizontal rule on footer */
+footer.site-footer:before {
+    display: none !important;
+    content: none !important;
+    height: 0 !important;
+}
+
+/* If theme injected a fixed dark background via .fixed-bottom class, make it transparent here */
+.site-footer.fixed-bottom, .site-footer.fixed-bottom * {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Remove any global body padding added elsewhere that creates a visible gap */
+body { padding-bottom: 0 !important; }
