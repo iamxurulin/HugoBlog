@@ -2,7 +2,7 @@
 title: "MCP协议的安全性设计包含哪些层面？"
 date: 2026-01-20 15:43:02
 categories:
-  - 八股
+  - AI
 tags:
   - 大模型
 draft: false

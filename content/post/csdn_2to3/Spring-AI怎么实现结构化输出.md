@@ -2,9 +2,9 @@
 title: "Spring-AI怎么实现结构化输出"
 date: 2026-01-12 16:12:09
 categories:
-- 八股
+- AI
 tags:
-  - Java
+  - 大模型
 draft: false
 ---
 

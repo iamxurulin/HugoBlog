@@ -2,9 +2,9 @@
 title: "介绍一下Spring-AI框架"
 date: 2026-01-11 15:43:59
 categories:
-- 八股
+- AI
 tags:
-  - Java
+  - 大模型
 draft: false
 ---
 
