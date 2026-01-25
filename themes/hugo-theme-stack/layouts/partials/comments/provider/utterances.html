@@ -1,8 +1,39 @@
-<script
-  src="https://utteranc.es/client.js"
-  repo="iamxurulin/iamxurulin.github.io"
-  issue-term="pathname"
-  theme="github-dark"
-  crossorigin="anonymous"
-  async
-></script>
+<!-- 1. 创建一个固定的容器，专门放评论 -->
+<div id="utterances-container"></div>
+
+<script>
+    (function() {
+        function loadUtterances() {
+            // 找到容器
+            const container = document.getElementById('utterances-container');
+            if (!container) return;
+
+            // 清空容器（防止 PJAX 跳转后重复加载）
+            container.innerHTML = '';
+
+            // 动态创建脚本
+            const script = document.createElement('script');
+            script.src = 'https://utteranc.es/client.js';
+            script.setAttribute('repo', 'iamxurulin/iamxurulin.github.io'); // 你的仓库名
+            script.setAttribute('issue-term', 'title'); // 推荐用 title 解决中文路径问题
+            script.setAttribute('label', 'Comment');
+            
+            // 根据当前模式设置主题 (如果你想固定暗色，就写 github-dark)
+            // 这里我帮你写了一个自动判断，默认用 github-light，你可以改成 github-dark
+            const theme = document.body.classList.contains('dark') ? 'github-dark' : 'github-light'; 
+            script.setAttribute('theme', 'github-light'); 
+            
+            script.setAttribute('crossorigin', 'anonymous');
+            script.async = true;
+
+            // 将脚本插入到容器中
+            container.appendChild(script);
+        }
+
+        // 立即执行一次
+        loadUtterances();
+
+        // 监听 PJAX 跳转完成事件（适配 Hugo Stack 主题）
+        document.addEventListener('pjax:complete', loadUtterances);
+    })();
+</script>

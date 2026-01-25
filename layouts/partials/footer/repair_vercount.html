@@ -1,139 +1,55 @@
 <script>
     (function() {
-        let scriptElement = null;
-        
-        function initVercount() {
-            console.log('🔵 initVercount 开始执行');
+        function reloadVercount() {
+            console.log('🔵 [Vercount] 开始重载...');
             
-            // 1. 检测是否在详情页
             const container = document.querySelector('.article-view');
-            
-            // 如果在首页/列表页,隐藏所有容器并退出
-            if (!container || document.querySelector('.article-list')) {
-                console.log('❌ 不在详情页,隐藏容器');
-                document.querySelectorAll('.article-view').forEach(el => {
-                    el.style.display = 'none';
-                });
+            // 如果不是文章页，隐藏并退出
+            if (!container) { 
+                document.querySelectorAll('.article-view').forEach(el => el.style.display = 'none');
                 return; 
             }
-
-            console.log('✅ 在详情页,开始处理');
-            
-            // 2. 显示容器
             container.style.display = 'flex';
 
-            // 3. 获取元素
+            // 1. 清理旧 ID，防止冲突
+            document.querySelectorAll('[id^="busuanzi_"]').forEach(el => el.removeAttribute('id'));
+
+            // 2. 绑定新 ID
             const pvContainer = container.querySelector('.temp-pv-container');
             const pvValue = container.querySelector('.temp-pv-value');
-            
-            if (!pvContainer || !pvValue) {
-                console.warn('⚠️ 未找到必要的 DOM 元素');
-                return;
+            if (pvContainer) pvContainer.id = 'busuanzi_container_page_pv';
+            if (pvValue) {
+                pvValue.id = 'busuanzi_value_page_pv';
+                pvValue.textContent = '...';
             }
 
-            // 4. 清理旧的 ID (重要!)
-            document.querySelectorAll('[id^="busuanzi_"]').forEach(el => {
-                console.log('🗑️ 移除旧 ID:', el.id);
-                el.removeAttribute('id');
-            });
+            // 3. 移除旧脚本 (如果有)
+            const oldScript = document.getElementById('vercount-script');
+            if (oldScript) oldScript.remove();
 
-            // 5. 绑定新的 ID - 必须在加载脚本之前!
-            pvContainer.id = 'busuanzi_container_page_pv';
-            pvValue.id = 'busuanzi_value_page_pv';
-            pvValue.textContent = '0'; // 先显示 0
+            // 4. 清除全局对象 (强制重置)
+            if (window.busuanzi) delete window.busuanzi;
+
+            // 5. ★★★ 核心修复：创建新脚本并加时间戳 ★★★
+            const script = document.createElement('script');
+            // 加时间戳 ?t=... 强制浏览器不使用缓存，必须重新执行脚本
+            script.src = "https://cn.vercount.one/js?t=" + new Date().getTime();
+            script.id = "vercount-script";
+            script.async = true;
+            script.defer = true; // 确保按顺序执行
             
-            console.log('✅ ID 已绑定:', pvContainer.id, pvValue.id);
-
-            // 6. 移除旧脚本
-            if (scriptElement && scriptElement.parentNode) {
-                console.log('🗑️ 移除旧的 Vercount 脚本');
-                scriptElement.parentNode.removeChild(scriptElement);
-                scriptElement = null;
-            }
-            
-            // 清除全局对象
-            if (window.busuanzi) {
-                console.log('🗑️ 清除旧的 busuanzi 对象');
-                delete window.busuanzi;
-            }
-
-            // 7. 延迟加载脚本,确保 DOM 完全准备好
-            setTimeout(() => {
-                console.log('📦 开始加载 Vercount 脚本');
-                
-                scriptElement = document.createElement('script');
-                scriptElement.src = "https://cn.vercount.one/js";
-                scriptElement.async = true;
-                scriptElement.defer = true; // 添加 defer
-                
-                scriptElement.onload = function() {
-                    console.log('✅ Vercount 脚本加载完成');
-                    
-                    // 多次检查 busuanzi 对象
-                    let checkCount = 0;
-                    const checkInterval = setInterval(() => {
-                        checkCount++;
-                        console.log(`🔍 检查 busuanzi 对象 (${checkCount}/30)`);
-                        
-                        if (window.busuanzi && typeof window.busuanzi.fetch === 'function') {
-                            clearInterval(checkInterval);
-                            console.log('✅ busuanzi 对象已创建,调用 fetch()');
-                            
-                            // 验证 DOM 元素还在
-                            const checkPvValue = document.getElementById('busuanzi_value_page_pv');
-                            if (checkPvValue) {
-                                console.log('✅ DOM 元素验证通过');
-                                try {
-                                    window.busuanzi.fetch();
-                                    console.log('✅ fetch() 调用成功');
-                                } catch(e) {
-                                    console.error('❌ fetch() 调用失败:', e);
-                                }
-                            } else {
-                                console.error('❌ DOM 元素已丢失!');
-                            }
-                        } else if (checkCount >= 30) {
-                            // 检查 3 秒后放弃
-                            clearInterval(checkInterval);
-                            console.error('❌ busuanzi 对象创建超时');
-                            
-                            // 检查脚本是否真的加载了
-                            console.log('🔍 window.busuanzi:', window.busuanzi);
-                            console.log('🔍 所有全局对象:', Object.keys(window).filter(k => k.includes('bus')));
-                        }
-                    }, 100);
-                };
-                
-                scriptElement.onerror = function() {
-                    console.error('❌ Vercount 脚本加载失败');
-                    pvValue.textContent = 'N/A';
-                };
-                
-                document.head.appendChild(scriptElement);
-                console.log('📦 脚本已添加到 head');
-                
-            }, 200); // 延迟 200ms 确保 DOM 稳定
+            document.head.appendChild(script);
+            console.log('✅ [Vercount] 脚本已插入 (带时间戳)');
         }
 
-        // 清理函数
-        function cleanup() {
-            console.log('🧹 PJAX 跳转开始,清理数据');
-            document.querySelectorAll('.article-view').forEach(el => {
-                el.style.display = 'none';
-            });
-        }
-
-        // 事件监听
+        // 初始化
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initVercount);
+            document.addEventListener('DOMContentLoaded', reloadVercount);
         } else {
-            initVercount();
+            reloadVercount();
         }
         
-        document.addEventListener('pjax:send', cleanup);
-        document.addEventListener('pjax:complete', () => {
-            console.log('🔄 PJAX 完成,重新初始化');
-            initVercount();
-        });
+        // PJAX 监听
+        document.addEventListener('pjax:complete', reloadVercount);
     })();
 </script>

@@ -39,7 +39,7 @@ params:
 
     comments:
         enabled: true
-        provider: utterances
+        provider: giscus
 
         disqusjs:
             shortname:
@@ -94,18 +94,18 @@ params:
             lang:
 
         giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
-            mapping:
-            strict:
-            lightTheme:
-            darkTheme:
+            repo: "iamxurulin/iamxurulin.github.io"
+            repoID: "R_kgDOQ4sEwg"
+            category: "Announcements"
+            categoryID: "DIC_kwDOQ4sEws4C1Yw9"
+            mapping: "pathname"
+            strict: "0"
+            lightTheme: 0
+            darkTheme: 1
             reactionsEnabled: 1
             emitMetadata: 0
-            inputPosition:
-            lang:
+            inputPosition: "bottom"
+            lang: "zh-CN"
 
         gitalk:
             owner:

@@ -1,52 +1,77 @@
-{{- with .Site.Params.comments.giscus -}}
-<script
-    src="https://giscus.app/client.js"
-    data-repo="{{- .repo -}}"
-    data-repo-id="{{- .repoID -}}"
-    data-category="{{- .category -}}"
-    data-category-id="{{- .categoryID -}}"
-    data-mapping="{{- default `title` .mapping -}}"
-    data-strict="{{- default 0 .strict -}}"
-    data-reactions-enabled="{{- default 1 .reactionsEnabled -}}"
-    data-emit-metadata="{{- default 0 .emitMetadata -}}"
-    data-input-position="{{- default `top` .inputPosition -}}"
-    data-theme="{{- default `light` .lightTheme -}}"
-    data-lang="{{- default `en` .lang -}}"
-    data-loading="{{- .loading -}}"
-    crossorigin="anonymous"
-    async
-></script>
+<!-- 1. 容器 -->
+<div id="giscus-container" class="giscus-container"></div>
+
 <script>
-    function setGiscusTheme(theme) {
-        let giscus = document.querySelector("iframe.giscus-frame");
-        if (giscus) {
-            giscus.contentWindow.postMessage(
-                {
-                    giscus: {
-                        setConfig: {
-                            theme: theme,
-                        },
-                    },
-                },
-                "https://giscus.app"
-            );
-        }
-    }
+    (function() {
+        function reloadGiscus() {
+            const container = document.getElementById('giscus-container');
+            if (!container) return;
 
-    (function () {
-        addEventListener("message", (e) => {
-            if (event.origin !== "https://giscus.app") return;
-            handler();
+            console.log('🚀 [Giscus] 正在重载 (自定义半透明背景)...');
+
+            container.innerHTML = '';
+
+            const script = document.createElement('script');
+            script.src = "https://giscus.app/client.js";
+            
+            // --- 配置 ---
+            script.setAttribute("data-repo", "iamxurulin/iamxurulin.github.io");
+            script.setAttribute("data-repo-id", "R_kgDOQ4sEwg");
+            script.setAttribute("data-category", "Announcements");
+            script.setAttribute("data-category-id", "DIC_kwDOQ4sEws4C1Yw9");
+            script.setAttribute("data-mapping", "title");
+            script.setAttribute("data-strict", "0");
+            script.setAttribute("data-reactions-enabled", "1");
+            script.setAttribute("data-emit-metadata", "0");
+            script.setAttribute("data-input-position", "top");
+            script.setAttribute("data-lang", "zh-CN");
+            script.setAttribute("crossorigin", "anonymous");
+            script.async = true;
+
+            // ★★★ 核心1：强制使用全透明主题，背景由 CSS 接管 ★★★
+            script.setAttribute("data-theme", "transparent_dark");
+
+            container.appendChild(script);
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', reloadGiscus);
+        } else {
+            reloadGiscus();
+        }
+
+        document.addEventListener('pjax:complete', function() {
+            setTimeout(reloadGiscus, 50);
         });
-        window.addEventListener("onColorSchemeChange", handler);
-
-        function handler() {
-            if (document.documentElement.dataset.scheme === "light") {
-                setGiscusTheme('{{- default "light" .lightTheme -}}');
-            } else {
-                setGiscusTheme('{{- default "dark_dimmed" .darkTheme -}}');
-            }
-        }
     })();
 </script>
-{{- end -}}
+
+<style>
+    /* ★★★ 核心2：自定义半透明黑色背景 ★★★ */
+    #giscus-container {
+        min-height: 150px;
+        width: 100%;
+        margin-top: 2rem;
+        
+        /* 这里的 0.6 就是透明度：
+           0.4 = 比较透
+           0.6 = 适中 (当前设置)
+           0.8 = 很黑，不太透
+           你可以根据喜好微调这个数字
+        */
+        background: rgba(30, 30, 30, 0.8) !important;
+        
+        /* 加一点磨砂效果 */
+        /* backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); */
+        
+        /* 圆角和内边距，让它像一个卡片 */
+        border-radius: 15px;
+        padding: 20px;
+        box-sizing: border-box;
+        
+        /* 微微的边框和阴影，增加质感 */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 15px rgba(0,0,0, 0.2);
+    }
+</style>
