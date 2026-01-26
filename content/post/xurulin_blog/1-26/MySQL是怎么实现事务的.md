@@ -50,4 +50,4 @@ InnoDB的锁粒度精确到行级（基于索引实现），还有间隙锁防�
 
 数据从一个正确状态转移到另一个正确状态，中间不会出现不一致的中间态，同时满足业务的约束规则。
 
-![](https://i-blog.csdnimg.cn/direct/a2edac8b93cc4d5080d8731e9958cee3.jpeg)
+![](/images/a2edac8b93cc4d5080d8731e9958cee3-c33deecc.jpeg)

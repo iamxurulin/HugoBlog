@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![](https://i-blog.csdnimg.cn/direct/81caa5725ce24513aedc8aa8faf2ad00.png)
+![](/images/81caa5725ce24513aedc8aa8faf2ad00-7cd778f4.png)
 
 ### 求解代码
 
@@ -37,7 +37,7 @@ public int rob (int[] nums){
 
 记忆化存储+自顶向下
 
-![](https://i-blog.csdnimg.cn/direct/f70ef4ccdac04402bc19bb7842a35ccf.png)
+![](/images/f70ef4ccdac04402bc19bb7842a35ccf-903b0028.png)
 
 ### 求解代码
 

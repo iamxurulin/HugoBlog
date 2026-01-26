@@ -8,8 +8,8 @@ tags:
 draft: false
 ---
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/9b52ccbab7ad4a96be480548bacd53a4.png#pic_center)
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/1399c53018cd43a1aa6f1689e7af2c77.png#pic_center)
+![在这里插入图片描述](/images/9b52ccbab7ad4a96be480548bacd53a4-6480cf44.png)
+![在这里插入图片描述](/images/1399c53018cd43a1aa6f1689e7af2c77-2db4af27.png)
 ### 求解代码
 ```java
 public String solve(String IP) {

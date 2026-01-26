@@ -9,7 +9,7 @@ draft: false
 ---
 
 在IDEA开发环境中，点击提交出现以下警告：
-![](https://i-blog.csdnimg.cn/img_convert/8553e99abef1ed10456168bc69f62d77.png)  
+![](/images/8553e99abef1ed10456168bc69f62d77-847631fb.png)  
 + CR：Carriage Return（回车）
 + LF：Line Feed（换行）
 

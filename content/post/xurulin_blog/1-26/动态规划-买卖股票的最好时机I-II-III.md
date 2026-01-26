@@ -9,7 +9,7 @@ draft: false
 ---
 
 
-![](https://i-blog.csdnimg.cn/img_convert/90374516d05f5567c118fdffac2fdecf.png)
+![](/images/90374516d05f5567c118fdffac2fdecf-447e2a17.png)
 
 ### 求解代码
 ```java
@@ -30,8 +30,8 @@ public int maxProfit (int[] prices) {
     }
 ```
 
-### ![](https://i-blog.csdnimg.cn/img_convert/49b3ead3292e8c086ec6fdb78e4f6993.png)
-![](https://i-blog.csdnimg.cn/img_convert/af57ac75bc839ea21a9dfbd71b93d5de.png)
+### ![](/images/49b3ead3292e8c086ec6fdb78e4f6993-8fcdb857.png)
+![](/images/af57ac75bc839ea21a9dfbd71b93d5de-1923e9dc.png)
 
 
 
@@ -57,11 +57,11 @@ public int maxProfit(int[] prices) {
 ### 小贴士
 和上面的类型（一）不一样的是，这题可以进行多次交易，代码上的体现就是：
 
-![](https://i-blog.csdnimg.cn/img_convert/7b7df3201c05f510ed788a9f3cc344b4.png)
+![](/images/7b7df3201c05f510ed788a9f3cc344b4-21fbe523.png)
 
-![](https://i-blog.csdnimg.cn/img_convert/9d8027488c0ca709a29c25fcecbd856a.png)
+![](/images/9d8027488c0ca709a29c25fcecbd856a-d5f932cc.png)
 
-![](https://i-blog.csdnimg.cn/img_convert/0cf98583a2aa0383b122cbc7a026e60b.png)
+![](/images/0cf98583a2aa0383b122cbc7a026e60b-dc48ea2b.png)
 
 ### 求解代码
 ```java

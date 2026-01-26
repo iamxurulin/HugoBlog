@@ -10,7 +10,7 @@ draft: false
 
 
 <!-- 这是一张图片，ocr 内容为： -->
-![](https://i-blog.csdnimg.cn/img_convert/e1e7f23e3f07b68cf0387165853920ba.jpeg)
+![](/images/e1e7f23e3f07b68cf0387165853920ba-39e8018c.jpeg)
 
 ### 求解代码
 ```java
