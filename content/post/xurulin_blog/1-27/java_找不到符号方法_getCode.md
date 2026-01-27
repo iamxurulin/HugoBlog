@@ -14,7 +14,7 @@ draft: false
 位置: 类型为com.xx.xx.exception.ErrorCode的变量 errorCode
 ```
 ### 解决方法
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/9b9fa382f8674a299650e667d45c7df9.png)
+![在这里插入图片描述](/images/9b9fa382f8674a299650e667d45c7df9-a5e1c1c8.png)
 看截图中间那个路径框：
 
 ```bash
